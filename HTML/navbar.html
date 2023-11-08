@@ -60,22 +60,4 @@
         </div>
     </nav>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPageURL = window.location.pathname;
-            console.log(currentPageURL + " current");
-
-            const navListItems = document.querySelectorAll("nav");
-
-            console.log(navListItems);
-            navListItems.forEach((listItem) => {
-                const anchor = listItem.querySelector("a");
-                console.log("anchor" + anchor);
-                if (anchor && anchor.getAttribute("href") === currentPageURL) {
-                    listItem.classList.add("active");
-                }
-            });
-        });
-    </script>
-
 </body>

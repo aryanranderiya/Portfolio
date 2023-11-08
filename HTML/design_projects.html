@@ -5,20 +5,21 @@
     <meta charset="UTF-8" />
     <title>Design Projects</title>
     <link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
+
     <header id="navbarContainer"></header>
     <script>
         const navbarContainer = document.getElementById("navbarContainer");
-
         fetch("navbar.html")
             .then((response) => response.text())
             .then((data) => {
                 navbarContainer.innerHTML = data;
             });
     </script>
+
 </body>
 
 </html>

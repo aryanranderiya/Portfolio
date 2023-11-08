@@ -17,7 +17,20 @@ if there is 20 put 20 */
   font: bold 300% Consolas, Monaco, monospace;
   border-right: 0.1em solid rgb(255, 255, 255);
   width: 13.2ch;
-  margin: 2em 2em;
+  /* margin: 2em; */
+  margin-top: 3em;
+  margin-bottom: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 1s steps(14, end),
+    blink-caret 0.5s step-end infinite alternate;
+}
+
+.animation_paragraph {
+  color: white;
+  font: bold 100% Consolas, Monaco, monospace;
+  border-right: 0.1em solid rgb(255, 255, 255);
+  width: 86ch;
   white-space: nowrap;
   overflow: hidden;
   -webkit-animation: typing 1s steps(14, end),

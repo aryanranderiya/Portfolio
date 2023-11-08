@@ -1,3 +1,68 @@
+html,
 body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   background-color: #171717;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+}
+
+.nav-item-with-icon a {
+  display: flex;
+  align-items: center;
+}
+
+.center-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram-icon {
+  color: transparent; /* Set the icon color to transparent */
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  ); /* Instagram gradient colors */
+  -webkit-background-clip: text; /* Clip text with the background gradient */
+  background-clip: text;
+}
+
+.socials i {
+  /* display: flex; */
+  margin-top: 1.5em;
+  margin: 1.5em 0 0 0.5em;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s ease-in-out;
+}
+
+.socials i:hover {
+  animation: bounce 0.8s ease;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px); /* Adjust the bounce height as needed */
+  }
+  60% {
+    transform: translateY(-5px); /* Adjust the bounce height as needed */
+  }
 }

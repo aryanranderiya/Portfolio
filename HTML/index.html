@@ -9,6 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel='stylesheet' type='text/css' href='/CSS/index.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/typing_animation.css'>
@@ -19,50 +22,85 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/2fafe620ef.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- Navigation Bar -->
-
-    <nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">Navbar</a>
-
-        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <div class="hori-selector">
-                    <div class="left"></div>
-                    <div class="right"></div>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top" style='background-color: #171717;'>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        Aryan Randeriya
+                    </a>
                 </div>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
-    <center>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active nav-icon">
+                        <a class="d-flex align-items-center" href="#">
+                            <div class="nav-icon-container">
+                                <span class="nav-icon-text"><b>Home</b></span>
+
+                                <span class="material-symbols-outlined">
+                                    home
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a class="d-flex align-items-center" href="#">
+                            <div class="nav-icon-container">
+                                <span class="nav-icon-text"><b>Coding Projects</b></span>
+                                <span class="material-symbols-outlined">
+                                    developer_mode_tv
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a class="d-flex align-items-center" href="#">
+                            <div class="nav-icon-container">
+                                <span class="nav-icon-text"><b>Design Projects</b></span>
+                                <span class="material-symbols-outlined">
+                                    palette
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a class="d-flex align-items-center" href="#">
+                            <div class="nav-icon-container">
+                                <span class="nav-icon-text"><b>Contact Me</b></span>
+                                <span class="material-symbols-outlined">
+                                    contacts
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hello World & Animating text -->
+    <div class="center-content">
         <div class="typing_animation">Hello World!</div>
-    </center>
+        <div class="animation_paragraph">My name is Aryan Randeriya, I am a 18-year-old Software
+            Developer & Graphic Designer.</div>
+    </div>
+
+    <div class="center-content">
+        <div class="socials">
+            <i class="fa-brands fa-instagram fa-4x instagram-icon"></i>
+            <i class="fa-brands fa-twitter fa-4x" style="color: #00acee;"></i>
+            <i class="fa-brands fa-linkedin fa-4x" style="color: #0072b1;"></i>
+            <i class="fa-brands fa-github fa-4x" style="color: white;"></i>
+            <i class="fa-brands fa-behance fa-4x" style="color: #053eff;"></i>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

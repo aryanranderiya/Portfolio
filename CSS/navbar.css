@@ -8,7 +8,7 @@
 
 .navbar-brand-text {
   display: none;
-  transition: opacity 0.5s ease; /* Slower and smoother opacity transition */
+  transition: opacity 0.5s ease;
 }
 
 .navbar-brand:hover .navbar-brand-text {

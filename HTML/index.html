@@ -7,22 +7,21 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel='stylesheet' type='text/css' href='/CSS/index.css'>
-    <link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/typing_animation.css'>
+    <script src='/JS/index.js'></script>
+
 
     <!-- Scripts -->
-    <script src='/JS/index.js'></script>
-    <script src='/JS/navbar.js'></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/2fafe620ef.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -35,6 +34,8 @@
             .then((response) => response.text())
             .then((data) => {
                 navbarContainer.innerHTML = data;
+
+                navbarContainer.style.backgroundColor = "#171717";
             });
     </script>
 

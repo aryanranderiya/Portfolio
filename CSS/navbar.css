@@ -24,7 +24,6 @@
 
 .nav-icon:hover .nav-icon-text {
   display: inline;
-  transition: transform 0.3s ease;
 }
 
 .nav-icon-text {
@@ -33,36 +32,3 @@
   margin-right: 10px;
   transition: opacity 0.5s ease;
 }
-
-/* 
-.nav-icon-text {
-  display: none;
-  margin-left: 10px;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.navbar-brand {
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-brand:hover .navbar-brand-text {
-  display: inline;
-  transform: translateX(0); 
-}
-
-.navbar-brand:hover {
-  transform: translateX(-20px); 
-}
-
-.navbar-brand-text {
-  display: none;
-  margin-left: 10px;
-  transition: opacity 0.3s ease-in-out;
- */

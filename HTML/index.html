@@ -27,61 +27,16 @@
 
 <body>
     <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar navbar-inverse navbar-fixed-top" style='background-color: #171717;'>
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        Aryan Randeriya
-                    </a>
-                </div>
+    <header id="navbarContainer"></header>
+    <script>
+        const navbarContainer = document.getElementById("navbarContainer");
 
-                <ul class="nav navbar-nav pull-right">
-                    <li class="active nav-icon">
-                        <a class="d-flex align-items-center" href="#">
-                            <div class="nav-icon-container">
-                                <span class="nav-icon-text"><b>Home</b></span>
-
-                                <span class="material-symbols-outlined">
-                                    home
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a class="d-flex align-items-center" href="#">
-                            <div class="nav-icon-container">
-                                <span class="nav-icon-text"><b>Coding Projects</b></span>
-                                <span class="material-symbols-outlined">
-                                    developer_mode_tv
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a class="d-flex align-items-center" href="#">
-                            <div class="nav-icon-container">
-                                <span class="nav-icon-text"><b>Design Projects</b></span>
-                                <span class="material-symbols-outlined">
-                                    palette
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- <li class="nav-icon">
-                        <a class="d-flex align-items-center" href="#">
-                            <div class="nav-icon-container">
-                                <span class="nav-icon-text"><b>Contact Me</b></span>
-                                <span class="material-symbols-outlined">
-                                    contacts
-                                </span>
-                            </div>
-                        </a>
-                    </li> -->
-                </ul>
-            </div>
-        </nav>
-    </header>
+        fetch("navbar.html")
+            .then((response) => response.text())
+            .then((data) => {
+                navbarContainer.innerHTML = data;
+            });
+    </script>
 
     <!-- Hello World & Animating text -->
     <div class="center-content">

@@ -1,3 +1,7 @@
+body {
+  background-color: #171717;
+}
+
 @keyframes typing {
   from {
     width: 0;

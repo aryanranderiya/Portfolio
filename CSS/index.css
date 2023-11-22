@@ -40,6 +40,7 @@ body {
 
 .socials i {
   /* display: flex; */
+
   margin-top: 1.5em;
   margin: 1.5em 0 0 0.5em;
   justify-content: center;
@@ -65,4 +66,8 @@ body {
   60% {
     transform: translateY(-5px); /* Adjust the bounce height as needed */
   }
+}
+
+.buttons{
+  display: inline-flex;
 }

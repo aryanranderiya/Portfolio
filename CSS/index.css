@@ -9,6 +9,22 @@ body {
 body {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
+
+  /* background-color: #e7ff99;
+  background-image: radial-gradient(
+      at 56% 25%,
+      hsla(244, 83%, 71%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 41% 71%, hsla(268, 90%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 15% 33%, hsla(0, 82%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 82% 60%, hsla(198, 87%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 12% 5%, hsla(69, 96%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 99% 48%, hsla(176, 81%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 47% 73%, hsla(24, 90%, 79%, 1) 0px, transparent 50%); */
+
+  background-size: 100% 100%;
+  height: 100vh; /* Ensure full height of the viewport */
 }
 
 .nav-item-with-icon a {
@@ -25,7 +41,7 @@ body {
 }
 
 .instagram-icon {
-  color: transparent; /* Set the icon color to transparent */
+  color: transparent;
   background: linear-gradient(
     45deg,
     #feda75,
@@ -33,13 +49,12 @@ body {
     #d62976,
     #962fbf,
     #4f5bd5
-  ); /* Instagram gradient colors */
-  -webkit-background-clip: text; /* Clip text with the background gradient */
+  );
+  -webkit-background-clip: text;
   background-clip: text;
 }
 
 .socials i {
-  /* display: flex; */
   margin: 1em 0 0 0.5em;
   justify-content: center;
   align-items: center;
@@ -69,4 +84,3 @@ body {
 .buttons {
   display: inline-flex;
 }
-

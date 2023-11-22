@@ -3,10 +3,28 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #171717;
+  background-color: #171717 !important;
 }
 
-body {
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: lighter;
+.title-heading {
+  color: white;
+  font-size: 10em;
+  font-weight: bolder;
+  margin-left: 5%;
+  font-family: VCR;
+}
+/* 
+.subheading {
+  font-size: 2em;
+  font-weight: bolder;
+  font-style: oblique;
+  margin-left: 5%;
+  color: #999999;
+  font-family: "Times New Roman", Times, serif;
+} */
+
+
+@font-face {
+  font-family: VCR;
+  src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
 }

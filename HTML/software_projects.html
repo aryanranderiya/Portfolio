@@ -8,8 +8,16 @@
 
     <link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/software_projects.css'>
+    <link rel='stylesheet' type='text/css' href='/CSS/terminal_card.css'>
+    <link rel='stylesheet' type='text/css' href='/CSS/card.css'>
+
+    <link rel="stylesheet" href="/CSS/hack.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2fafe620ef.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -23,6 +31,72 @@
                 navbarContainer.innerHTML = data;
             });
     </script>
+
+
+    <div class="title">
+        <h1 class="font-weight-bold title-heading"><br>Software<br>Projects</h1>
+        <!-- <h5 class="font-weight-bold subheading"><br>by Aryan Randeriya</h5> -->
+    </div>
+
+    <div class="container">
+        <div class="terminal_toolbar">
+            <div class="butt">
+                <button class="btn btn-color"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+            </div>
+            <p class="user">aryanranderiya: ~</p>
+            <div class="add_tab">
+                +
+            </div>
+        </div>
+        <div class="terminal_body">
+            <div class="terminal_promt">
+                <span class="terminal_user">aryan@randeriya:</span>
+                <span class="terminal_location">~</span>
+                <span class="terminal_bling">Welcome! Here you can view all my Software Development Projects i've ever
+                    made!<br>
+                    Alternate Portfolio: <a href="https://github.com/aryanranderiya">Github/AryanRanderiya
+                        <span class="material-symbols-outlined md-18">open_in_new</span>
+                    </a>
+                </span>
+                <span class="terminal_cursor"> </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="image"></div>
+            <div class="content">
+                <a href="#">
+                    <span class="card_title">
+                        Project Title </span>
+                </a>
+
+                <p class="card_desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+                    dolores, possimus pariatur animi temporibus nesciunt praesentium
+                </p>
+
+                <div class="btns">
+                    <a class="action secondary" href="#">
+                        <i class="fa-brands fa-github fa-2x" style="color: black;"></i>Github<span aria-hidden="true">
+                            →
+                        </span></a>
+
+                    <a class="action primary" href="#">
+                        View More <span aria-hidden="true">
+                            →
+                        </span>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
 
 </body>
 

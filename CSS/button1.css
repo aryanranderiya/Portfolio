@@ -43,7 +43,7 @@
 .button1 .icon svg {
   width: 1.1em;
   transition: transform 0.3s;
-  color: #00bbff;
+  color: #00bbff ;
 }
 
 .button1:hover .icon svg {

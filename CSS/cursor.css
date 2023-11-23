@@ -10,8 +10,61 @@ body {
   filter: invert(100%);
 }
 
-a,button:hover {
+a,
+button:hover {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>')
       10 10,
     auto;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: hsla(195, 100%, 50%, 1);
+    background-image: radial-gradient(
+        at 88% 5%,
+        hsla(204, 100%, 50%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
+      radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
+      radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
+  }
+
+  .my_portfolio {
+    font-size: 3em;
+  }
+
+  .aryan_randeriya {
+    font-size: 8em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: hsla(195, 100%, 50%, 1);
+    background-image: radial-gradient(
+        at 88% 5%,
+        hsla(204, 100%, 50%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
+      radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
+      radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
+  }
+
+  .my_portfolio {
+    font-size: 2em;
+  }
+
+  .aryan_randeriya {
+    font-size: 6em;
+  }
 }

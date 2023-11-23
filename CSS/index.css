@@ -42,7 +42,7 @@ body {
 
 .black_cover.visible {
   opacity: 1;
-  z-index: 1; /* Add this line */
+  z-index: 1;
 }
 
 .nav-item-with-icon a {

@@ -16,7 +16,7 @@ const firebaseConfig = {
   measurementId: "G-S3XP36W3P9",
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const database = getDatabase();
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -65,7 +65,7 @@ body {
 }
 
 .socials i:hover {
-  animation: bounce 0.8s ease;
+  animation: bounce 0.5s ease-out;
 }
 
 .buttons {

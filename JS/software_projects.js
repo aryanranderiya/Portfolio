@@ -46,7 +46,7 @@ onValue(
                 <p class="card_desc">${projectDesc} </p>
 
                 <div class="btns">
-                    <a class="action secondary" href="${githubLink} ">Github Repo<span aria-hidden="true" class="icon_btn"> <i
+                    <a class="action secondary" href="${githubLink}" target="_blank">Github Repo<span aria-hidden="true" class="icon_btn"> <i
                                 class="fa-brands fa-github fa-2x" style="color: #999999;"></i> </span></a>
 
                     <a class="action primary" href="#">View Project<span aria-hidden="true" class="icon_btn">

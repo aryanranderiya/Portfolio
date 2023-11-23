@@ -10,6 +10,7 @@
     <link rel='stylesheet' type='text/css' href='/CSS/software_projects.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/terminal_card.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/card.css'>
+    <link rel='stylesheet' type='text/css' href='/CSS/preloader.css'>
 
     <script src="/JS/software_projects.js" type="module"></script>
 
@@ -21,57 +22,64 @@
 </head>
 
 <body>
-
-    <header id="navbarContainer"></header>
-    <script>
-        const navbarContainer = document.getElementById("navbarContainer");
-        fetch("navbar.html")
-            .then((response) => response.text())
-            .then((data) => {
-                navbarContainer.innerHTML = data;
-            });
-    </script>
-
-
-    <div class="title">
-        <h1 class="font-weight-bold title-heading"><br>Software<br>Projects</h1>
-        <!-- <h5 class="font-weight-bold subheading"><br>by Aryan Randeriya</h5> -->
+    <div class="preloader">
+        <svg viewBox="25 25 50 50">
+            <circle r="20" cy="50" cx="50"></circle>
+        </svg>
     </div>
 
-    <!-- The Terminal -->
-    <div class="container">
-        <div class="terminal_toolbar">
-            <div class="butt">
-                <button class="btn btn-color"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
-            </div>
-            <p class="user">aryanranderiya: ~</p>
-            <div class="add_tab">
-                +
-            </div>
-        </div>
-        <div class="terminal_body">
-            <div class="terminal_promt">
-                <span class="terminal_user">aryan@randeriya:</span>
-                <span class="terminal_location">~</span>
-                <span class="terminal_bling">Welcome! Here you can view all my Software Development Projects i've
-                    ever
-                    made!<br>
-                    Alternate Portfolio: <a href="https://github.com/aryanranderiya">Github/AryanRanderiya
-                        <span class="material-symbols-outlined md-18">open_in_new</span>
-                    </a>
-                </span>
-                <span class="terminal_cursor"> </span>
-            </div>
+    <div id="content" style="display: none;">
+
+        <header id="navbarContainer"></header>
+        <script>
+            const navbarContainer = document.getElementById("navbarContainer");
+            fetch("navbar.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    navbarContainer.innerHTML = data;
+                });
+        </script>
+
+
+        <div class="title">
+            <h1 class="font-weight-bold title-heading"><br>Software<br>Projects</h1>
+            <!-- <h5 class="font-weight-bold subheading"><br>by Aryan Randeriya</h5> -->
         </div>
 
-    </div>
+        <!-- The Terminal -->
+        <div class="container">
+            <div class="terminal_toolbar">
+                <div class="butt">
+                    <button class="btn btn-color"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                </div>
+                <p class="user">aryanranderiya: ~</p>
+                <div class="add_tab">
+                    +
+                </div>
+            </div>
+            <div class="terminal_body">
+                <div class="terminal_promt">
+                    <span class="terminal_user">aryan@randeriya:</span>
+                    <span class="terminal_location">~</span>
+                    <span class="terminal_bling">Welcome! Here you can view all my Software Development Projects i've
+                        ever
+                        made!<br>
+                        Alternate Portfolio: <a href="https://github.com/aryanranderiya">Github/AryanRanderiya
+                            <span class="material-symbols-outlined md-18">open_in_new</span>
+                        </a>
+                    </span>
+                    <span class="terminal_cursor"> </span>
+                </div>
+            </div>
 
-    <!-- Project Cards -->
-    <div class="cards" id="cards">
+        </div>
 
-        <!-- <div class="card" id="card">
+        <!-- Project Cards -->
+        <div class="cards" id="cards">
+
+            <!-- <div class="card" id="card">
             <div class="image"></div>
             <div class="content">
                 <a href="#"> <span class="card_title">Project Title </span></a>
@@ -86,6 +94,7 @@
                 </div>
             </div>
         </div> -->
+        </div>
     </div>
 
 </body>

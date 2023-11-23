@@ -67,3 +67,21 @@ function processDataAndHidePreloader(snapshot) {
 }
 
 onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
+
+// window.onscroll = function () {
+//   if (document.documentElement.scrollTop > cards.getBoundingClientRect().top) {
+//     cards.classList.remove("visible");
+//   } else {
+//     cards.classList.add("visible");
+//   }
+// };
+
+var cards = document.querySelector(".cards");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY == 0) {
+    cards.classList.remove("visible");
+  } else {
+    cards.classList.add("visible");
+  }
+});

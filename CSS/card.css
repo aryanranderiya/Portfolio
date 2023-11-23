@@ -2,6 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 5% !important;
+  opacity: 0; /* Initial opacity set to 0 */
+  transition: opacity 0.2s ease-in-out; /* Transition for the opacity property */
+}
+
+.cards.visible {
+  visibility: visible;
+  opacity: 1; /* Set opacity to 1 for the visible state */
+}
+
+.cards.hidden {
+  visibility: hidden;
+  opacity: 0; /* Set opacity to 0 for the hidden state */
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .card {
@@ -99,4 +112,11 @@
 
 .icon_btn {
   margin-left: 15px;
+}
+
+.image {
+  background-image: url("/images/bg_aryan_swirl.jpg"); /* Replace 'your-image.jpg' with the path to your image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image within the container */
+  background-repeat: no-repeat; /* Do not repeat the image */
 }

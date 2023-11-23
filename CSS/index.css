@@ -1,14 +1,47 @@
+@font-face {
+  font-family: IllusionSerif;
+  src: url("/fonts/IllusionSerif-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Times;
+  src: url("/fonts/times.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: TimesBD;
+  src: url("/fonts/timesbd.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: TimesI;
+  src: url("/fonts/timesi.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: TimesBI;
+  src: url("/fonts/timesbi.ttf") format("truetype");
+}
+
+
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100vh;
-
   /* background-color: #171717; */
 }
 
 body {
+  /* cursor: url("images/white_circle.png"); */
+
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>')
+      10 10,
+    auto;
+
+  /* cursor: url("/images/white_circle.png") 2 2, auto; */
+
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
 
@@ -82,4 +115,89 @@ body {
 
 .buttons {
   display: inline-flex;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_heading_1 {
+  color: white;
+}
+
+.my_portfolio {
+  font-size: 4em;
+  font-family: IllusionSerif;
+}
+
+.aryan_randeriya {
+  font-size: 10em;
+  font-family: TimesDisplay;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  background: black;
+  /* 171717 */
+}
+
+/* scroll button */
+
+.scroll_btn {
+  bottom: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349);
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: absolute;
+}
+
+.test {
+  transition-duration: 0.3s;
+}
+
+.scroll_btn:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+.scroll_btn:hover .test {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(200%);
+}
+
+.scroll_btn::before {
+  position: absolute;
+  bottom: -20px;
+  content: "SCROLL DOWN";
+  color: rgb(0, 0, 0);
+  transition-duration: 0.3s;
+  font-size: 0px;
+}
+
+.scroll_btn:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
 }

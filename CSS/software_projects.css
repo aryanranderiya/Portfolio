@@ -8,10 +8,11 @@ body {
 
 .title-heading {
   color: white;
-  font-size: 10em;
+  font-size: 8em;
   font-weight: bolder;
   margin-left: 5%;
   font-family: VCR;
+  margin-top: -35px;
 }
 /* 
 .subheading {

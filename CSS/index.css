@@ -34,6 +34,8 @@ body {
   width: 100%;
   height: 100vh;
   /* background-color: #171717; */
+  transition: cursor 1s ease-in-out;
+  position: relative;
 }
 
 body {
@@ -126,6 +128,14 @@ body {
   color: white;
 }
 
+.my_portfolio:hover {
+  filter: invert(100%);
+}
+
+.aryan_randeriya:hover {
+  filter: invert(100%);
+}
+
 .my_portfolio {
   font-size: 4em;
   font-family: IllusionSerif;
@@ -162,9 +172,9 @@ body {
   position: absolute;
 }
 
-.test {
+/* .test {
   transition-duration: 0.3s;
-}
+} */
 
 .scroll_btn:hover {
   width: 140px;

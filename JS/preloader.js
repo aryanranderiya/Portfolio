@@ -6,3 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "auto";
   }, 1000);
 });
+
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};

@@ -44,14 +44,25 @@
 
     <div id="content">
 
+        <!-- Navigation Bar -->
         <header id="navbarContainer"></header>
         <script>
-            const navbarContainer = document.getElementById("navbarContainer");
-            fetch("navbar.html")
-                .then((response) => response.text())
-                .then((data) => {
-                    navbarContainer.innerHTML = data;
-                });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const blackCover = document.querySelector(".black_cover");
+
+                setTimeout(function () {
+                    blackCover.classList.remove("visible");
+
+                    // Now that the preloader is hidden, fetch and insert the navbar
+                    const navbarContainer = document.getElementById("navbarContainer");
+                    fetch("navbar.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            navbarContainer.innerHTML = data;
+                        });
+                }, 1000);
+            });
         </script>
 
 

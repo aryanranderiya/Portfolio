@@ -4,6 +4,7 @@
   margin-left: 5% !important;
   opacity: 0; /* Initial opacity set to 0 */
   transition: opacity 0.2s ease-in-out; /* Transition for the opacity property */
+  margin-bottom: 4em;
 }
 
 .cards.visible {

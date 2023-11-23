@@ -3,25 +3,27 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #171717;
+  height: 100vh;
+
+  /* background-color: #171717; */
 }
 
 body {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
 
-  /* background-color: #e7ff99;
+  background-color: hsla(195, 100%, 50%, 1);
   background-image: radial-gradient(
-      at 56% 25%,
-      hsla(244, 83%, 71%, 1) 0px,
+      at 88% 5%,
+      hsla(204, 100%, 50%, 1) 0px,
       transparent 50%
     ),
-    radial-gradient(at 41% 71%, hsla(268, 90%, 68%, 1) 0px, transparent 50%),
-    radial-gradient(at 15% 33%, hsla(0, 82%, 69%, 1) 0px, transparent 50%),
-    radial-gradient(at 82% 60%, hsla(198, 87%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 12% 5%, hsla(69, 96%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 99% 48%, hsla(176, 81%, 60%, 1) 0px, transparent 50%),
-    radial-gradient(at 47% 73%, hsla(24, 90%, 79%, 1) 0px, transparent 50%); */
+    radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
+    radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
+    radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
+    radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
+    radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
 }
 
 .nav-item-with-icon a {

@@ -82,7 +82,7 @@
 }
 
 .terminal_body {
-  background: rgba(0, 0, 0, 0.6);
+  background: #171717;
   height: calc(100% - 30px);
   padding-top: 2px;
   margin-top: -1px;
@@ -120,7 +120,7 @@ a {
 /* a:hover {
   color: #6da7ff !important;
 } */
-
+/* 
 .terminal_cursor {
   display: block;
   height: 20px;
@@ -149,4 +149,4 @@ a {
   100% {
     background: #ffffff;
   }
-}
+} */

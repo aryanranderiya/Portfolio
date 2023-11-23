@@ -1,7 +1,3 @@
-body {
-  background-color: #171717;
-}
-
 @keyframes typing {
   from {
     width: 0;
@@ -24,17 +20,25 @@ body {
   margin-bottom: 1em;
   white-space: nowrap;
   overflow: hidden;
+
+  animation: typing 1s steps(14, end),
+    blink-caret 0.5s step-end infinite alternate;
+
   -webkit-animation: typing 1s steps(14, end),
     blink-caret 0.5s step-end infinite alternate;
 }
 
 .animation_paragraph {
-  color: white;
   font: bold 100% Consolas, Monaco, monospace;
-  border-right: 0.1em solid rgb(255, 255, 255);
-  width: 86ch;
+  color: white;
+  border-right: 0.2em solid rgb(255, 255, 255);
+  width: 115ch;
   white-space: nowrap;
   overflow: hidden;
+
+  animation: typing 1s steps(14, end),
+    blink-caret 0.5s step-end infinite alternate;
+
   -webkit-animation: typing 1s steps(14, end),
     blink-caret 0.5s step-end infinite alternate;
 }

@@ -9,41 +9,36 @@
 
     <link rel='stylesheet' type='text/css' href='/CSS/admin_panel.css'>
 
-    <script src='/JS/firebase_init.js'></script>
-    <script src='/JS/admin_panel.js'></script>
+    <script type="module" src='/JS/firebase_init.js' type="module"></script>
+    <script type="module" src='/JS/admin_panel.js'></script>
 
 </head>
 
 <body>
 
-    <form class="form">
+    <form class="form" id="submit-project-form">
         <p class="title">Create a New Project! </p>
 
         <div class="flex">
             <label>
-                <input class="input" type="text" placeholder="" required="">
+                <input class="input" type="text" id="project_title" placeholder="" required="">
                 <span>Project Title</span>
             </label>
 
             <label>
-                <input class="input" type="text" placeholder="" required="">
+                <input class="input" id="project_type" type="text" placeholder="" required="">
                 <span>Project Type</span>
             </label>
 
         </div>
 
         <label>
-            <input class="input" type="text" placeholder="" required="">
-            <span>Project Title</span>
-        </label>
-
-        <label>
-            <input class="input" type="text" placeholder="" required="">
+            <input class="input" id="project_description" type="text" placeholder="" required="">
             <span>Project Description</span>
         </label>
 
         <label>
-            <input class="input" type="text" placeholder="" required="">
+            <input class="input" id="githubLink" type="text" placeholder="" required="">
             <span>Github Link</span>
         </label>
 

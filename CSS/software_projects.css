@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #171717 !important;
+  background-color: #000000 !important;
 }
 
 .title-heading {
@@ -22,7 +22,6 @@ body {
   color: #999999;
   font-family: "Times New Roman", Times, serif;
 } */
-
 
 @font-face {
   font-family: VCR;

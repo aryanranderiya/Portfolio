@@ -23,6 +23,9 @@
   src: url("/fonts/timesbi.ttf") format("truetype");
 }
 
+* {
+  user-select: none;
+}
 
 html,
 body {
@@ -34,14 +37,6 @@ body {
 }
 
 body {
-  /* cursor: url("images/white_circle.png"); */
-
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>')
-      10 10,
-    auto;
-
-  /* cursor: url("/images/white_circle.png") 2 2, auto; */
-
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
 

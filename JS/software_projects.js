@@ -59,11 +59,11 @@ function processDataAndHidePreloader(snapshot) {
     document.getElementById("cards").appendChild(card);
   });
 
-  const preloader = document.querySelector(".preloader");
-  const content = document.getElementById("content");
+  // const preloader = document.querySelector(".preloader");
+  // const content = document.getElementById("content");
 
-  preloader.style.display = "none";
-  content.style.display = "block";
+  // preloader.style.display = "none";
+  // content.style.display = "block";
 }
 
 onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });

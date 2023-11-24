@@ -68,14 +68,6 @@ function processDataAndHidePreloader(snapshot) {
 
 onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
 
-// window.onscroll = function () {
-//   if (document.documentElement.scrollTop > cards.getBoundingClientRect().top) {
-//     cards.classList.remove("visible");
-//   } else {
-//     cards.classList.add("visible");
-//   }
-// };
-
 var cards = document.querySelector(".cards");
 
 window.addEventListener("scroll", function () {
@@ -84,4 +76,16 @@ window.addEventListener("scroll", function () {
   } else {
     cards.classList.add("visible");
   }
+});
+
+//! Software Projects Title
+
+software_projects_title.addEventListener("mouseover", () => {
+  cursor.style.transform = "scale(6)";
+  cursor.style.mixBlendMode = "difference";
+});
+
+software_projects_title.addEventListener("mouseout", () => {
+  cursor.style.transform = "none";
+  cursor.style.mixBlendMode = "normal";
 });

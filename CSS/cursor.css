@@ -1,4 +1,4 @@
-body {
+/* body {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>')
       10 10,
     auto;
@@ -15,4 +15,29 @@ button:hover {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>')
       10 10,
     auto;
+} */
+
+/*! add new */
+
+* {
+  cursor: none;
 }
+.cursor {
+  z-index: 2000;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  pointer-events: none;
+  box-shadow: 0px 0px 10px white;
+
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out; /* Add transition property */
+}
+/* 
+.titles:hover + .cursor {
+  opacity: 1;
+  transform: scale(6);
+  mix-blend-mode: difference;
+} */

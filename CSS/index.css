@@ -2,6 +2,14 @@
   user-select: none;
 }
 
+button {
+  cursor: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
 html,
 body {
   margin: 0;
@@ -84,14 +92,6 @@ body {
 
 .title_heading_1 {
   color: white;
-}
-
-.my_portfolio:hover {
-  filter: invert(100%);
-}
-
-.aryan_randeriya:hover {
-  filter: invert(100%);
 }
 
 .my_portfolio {

@@ -15,27 +15,6 @@ body {
   margin-bottom: 3%;
 }
 
-.title-heading:hover {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23000000" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>')
-      10 10,
-    auto;
-}
-
-.title-heading:not(:hover) {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>')
-      10 10,
-    auto;
-}
-/* 
-.subheading {
-  font-size: 2em;
-  font-weight: bolder;
-  font-style: oblique;
-  margin-left: 5%;
-  color: #999999;
-  font-family: "Times New Roman", Times, serif;
-} */
-
 @font-face {
   font-family: VCR;
   src: url("/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");

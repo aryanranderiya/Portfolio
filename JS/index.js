@@ -16,11 +16,13 @@ const main_text = document.querySelector(".main_text");
 titles.addEventListener("mouseover", () => {
   cursor.style.transform = "scale(6)";
   cursor.style.mixBlendMode = "difference";
+  cursor.style.boxShadow = "none";
 });
 
 titles.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 50px white";
 });
 
 //! Project Buttons
@@ -28,21 +30,25 @@ titles.addEventListener("mouseout", () => {
 btn1.addEventListener("mouseover", () => {
   cursor.style.transform = "scale(2)";
   cursor.style.mixBlendMode = "difference";
+  cursor.style.boxShadow = "none";
 });
 
 btn1.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 50px white";
 });
 
 btn2.addEventListener("mouseover", () => {
   cursor.style.transform = "scale(2)";
   cursor.style.mixBlendMode = "difference";
+  cursor.style.boxShadow = "none";
 });
 
 btn2.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 50px white";
 });
 
 //! Homepage Text

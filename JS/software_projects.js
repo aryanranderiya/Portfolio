@@ -81,11 +81,13 @@ window.addEventListener("scroll", function () {
 //! Software Projects Title
 
 software_projects_title.addEventListener("mouseover", () => {
-  cursor.style.transform = "scale(6)";
+  cursor.style.transform = "scale(8)";
   cursor.style.mixBlendMode = "difference";
+  cursor.style.boxShadow = "none";
 });
 
 software_projects_title.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 50px white";
 });

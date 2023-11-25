@@ -20,8 +20,6 @@ initializeApp(firebaseConfig);
 const database = getDatabase();
 const projectsRef = ref(database, "Projects/");
 
-// ... Your existing code
-
 function processDataAndHidePreloader(snapshot) {
   snapshot.forEach((childSnapshot) => {
     const projectDetails = childSnapshot.val();
@@ -47,7 +45,7 @@ function processDataAndHidePreloader(snapshot) {
 
               <div class="btns">
                   <a class="action secondary" href="${githubLink}" target="_blank">Github Repo<span aria-hidden="true" class="icon_btn"> <i
-                              class="fa-brands fa-github fa-2x" style="color: #999999;"></i> </span></a>
+                              class="fa-brands fa-github fa-2x"></i> </span></a>
 
                   <a class="action primary" href="#">View Project<span aria-hidden="true" class="icon_btn">
                           <span class="material-symbols-outlined fa-1x">open_in_new</span></a>
@@ -64,9 +62,25 @@ function processDataAndHidePreloader(snapshot) {
 
   // preloader.style.display = "none";
   // content.style.display = "block";
+
+  const blackCover = document.querySelector(".black_cover");
+
+  setTimeout(function () {
+    blackCover.classList.remove("visible");
+    document.body.style.overflow = "auto";
+
+    const navbarContainer = document.getElementById("navbarContainer");
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        navbarContainer.innerHTML = data;
+      });
+  }, 1000);
 }
 
-onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
+document.addEventListener("DOMContentLoaded", function () {
+  onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
+});
 
 var cards = document.querySelector(".cards");
 

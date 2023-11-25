@@ -5,12 +5,14 @@ body {
 .black_cover {
   height: 100vh;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   overflow: hidden;
   position: absolute;
   opacity: 0;
   transition: opacity 0.3s ease-out;
   z-index: -1;
+  backdrop-filter: blur(15.2px);
+  -webkit-backdrop-filter: blur(15.2px);
 }
 
 .black_cover.visible {
@@ -40,7 +42,7 @@ body {
 }
 
 .spinner > div {
-  background-color: black;
+  background-color: transparent;
   height: 100%;
   position: absolute;
   width: 100%;

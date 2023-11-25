@@ -67,13 +67,15 @@ function processDataAndHidePreloader(snapshot) {
   // preloader.style.display = "none";
   // content.style.display = "block";
 
-  const blackCover = document.querySelector(".black_cover");
+  //! const blackCover = document.querySelector(".black_cover");
+
   const terminal_bling = document.querySelector(".terminal_bling");
 
-  terminal_bling;
   setTimeout(function () {
-    blackCover.classList.remove("visible");
-    document.body.style.overflow = "auto";
+    // ! ABOVE
+
+    // blackCover.classList.remove("visible");
+    // document.body.style.overflow = "auto";
 
     terminal_bling.classList.add("animation_paragraph");
 
@@ -85,6 +87,13 @@ function processDataAndHidePreloader(snapshot) {
       });
   }, 1000);
 }
+
+// ! MOVE THIS LINE ABOVE
+const blackCover = document.querySelector(".black_cover");
+
+blackCover.classList.remove("visible");
+document.body.style.overflow = "auto";
+// !
 
 document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
@@ -103,7 +112,7 @@ window.addEventListener("scroll", function () {
 //! Software Projects Title
 
 software_projects_title.addEventListener("mouseover", () => {
-  cursor.style.transform = "scale(10)";
+  cursor.style.transform = "scale(0)";
   cursor.style.mixBlendMode = "difference";
   cursor.style.boxShadow = "none";
 });

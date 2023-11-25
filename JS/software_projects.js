@@ -103,7 +103,7 @@ window.addEventListener("scroll", function () {
 //! Software Projects Title
 
 software_projects_title.addEventListener("mouseover", () => {
-  cursor.style.transform = "scale(8)";
+  cursor.style.transform = "scale(10)";
   cursor.style.mixBlendMode = "difference";
   cursor.style.boxShadow = "none";
 });

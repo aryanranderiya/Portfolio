@@ -6,6 +6,9 @@ body {
   background-color: #000000 !important;
 }
 
+* {
+  user-select: none;
+}
 .title-heading {
   width: fit-content;
   color: white;

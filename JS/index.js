@@ -15,7 +15,7 @@ const marquee = document.querySelector(".marquee");
 // ! Titles
 
 titles.addEventListener("mouseover", () => {
-  cursor.style.transform = "scale(6)";
+  cursor.style.transform = "scale(8)";
   cursor.style.mixBlendMode = "difference";
   cursor.style.boxShadow = "none";
 });

@@ -10,7 +10,7 @@ function scrollToContent() {
 const titles = document.querySelector(".title_heading_1");
 const scroll_btn = document.querySelector(".scroll_btn");
 const main_text = document.querySelector(".main_text");
-const marquee_text = document.querySelector(".scrolling");
+const marquee = document.querySelector(".marquee");
 
 // ! Titles
 
@@ -23,7 +23,7 @@ titles.addEventListener("mouseover", () => {
 titles.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
-  cursor.style.boxShadow = "0px 0px 50px white";
+  cursor.style.boxShadow = "0px 0px 30px white";
 });
 
 //! Project Buttons
@@ -37,7 +37,7 @@ btn1.addEventListener("mouseover", () => {
 btn1.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
-  cursor.style.boxShadow = "0px 0px 50px white";
+  cursor.style.boxShadow = "0px 0px 30px white";
 });
 
 btn2.addEventListener("mouseover", () => {
@@ -49,7 +49,7 @@ btn2.addEventListener("mouseover", () => {
 btn2.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
-  cursor.style.boxShadow = "0px 0px 50px white";
+  cursor.style.boxShadow = "0px 0px 30px white";
 });
 
 //! Homepage Text
@@ -66,12 +66,14 @@ main_text.addEventListener("mouseout", () => {
 
 //  ! Marquee
 
-marquee_text.addEventListener("mouseover", () => {
+marquee.addEventListener("mouseover", () => {
   cursor.style.transform = "scale(6)";
   cursor.style.mixBlendMode = "difference";
+  cursor.style.boxShadow = "0px 0px 30px white";
 });
 
-marquee_text.addEventListener("mouseout", () => {
+marquee.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 30px white";
 });

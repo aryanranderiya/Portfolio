@@ -38,6 +38,29 @@ body {
     radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
 }
 
+@font-face {
+  font-family: Akira;
+  src: url("/fonts/Akira.ttf") format("truetype");
+}
+
+.scrolling {
+  width: 100%;
+  font-family: Akira;
+}
+
+.no_outline_text {
+  color: white;
+}
+
+.marquee_text {
+  display: inline-flex;
+}
+
+.outline_text {
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
 .nav-item-with-icon a {
   display: flex;
   align-items: center;

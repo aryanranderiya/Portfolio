@@ -64,10 +64,14 @@ function processDataAndHidePreloader(snapshot) {
   // content.style.display = "block";
 
   const blackCover = document.querySelector(".black_cover");
+  const terminal_bling = document.querySelector(".terminal_bling");
 
+  terminal_bling;
   setTimeout(function () {
     blackCover.classList.remove("visible");
     document.body.style.overflow = "auto";
+
+    terminal_bling.classList.add("animation_paragraph");
 
     const navbarContainer = document.getElementById("navbarContainer");
     fetch("navbar.html")

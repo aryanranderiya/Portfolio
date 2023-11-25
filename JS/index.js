@@ -10,6 +10,7 @@ function scrollToContent() {
 const titles = document.querySelector(".title_heading_1");
 const scroll_btn = document.querySelector(".scroll_btn");
 const main_text = document.querySelector(".main_text");
+const marquee_text = document.querySelector(".scrolling");
 
 // ! Titles
 
@@ -59,6 +60,18 @@ main_text.addEventListener("mouseover", () => {
 });
 
 main_text.addEventListener("mouseout", () => {
+  cursor.style.transform = "none";
+  cursor.style.mixBlendMode = "normal";
+});
+
+//  ! Marquee
+
+marquee_text.addEventListener("mouseover", () => {
+  cursor.style.transform = "scale(6)";
+  cursor.style.mixBlendMode = "difference";
+});
+
+marquee_text.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
 });

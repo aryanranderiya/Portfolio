@@ -1,3 +1,7 @@
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
 
 import {

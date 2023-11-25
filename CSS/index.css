@@ -49,6 +49,9 @@ body {
   font-family: Akira;
   bottom: 0;
   position: absolute;
+  display: inline-flex;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .no_outline_text {
@@ -57,6 +60,26 @@ body {
 
 .marquee_text {
   display: inline-flex;
+  animation: marquee 15s linear infinite;
+}
+
+.scrolling:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), BLACK);
+}
+
+.scrolling:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), BLACK);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .outline_text {

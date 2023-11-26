@@ -43,7 +43,6 @@ body {
   font-family: Akira;
   src: url("/fonts/Akira.ttf") format("truetype");
 }
-
 /* !marquee */
 
 .marquee__group span.outline_text {
@@ -68,6 +67,7 @@ body {
   bottom: 0;
   position: absolute;
   white-space: nowrap;
+
   /*background-color: green;*/
   /*transform: skewY(-3deg); */
   /*transform: rotate(-5deg) translateY(-30px) translateX(50px);*/
@@ -95,7 +95,7 @@ body {
 
 @media only screen and (min-width: 360px) {
   .marquee__group span {
-    font-size: 3vw;
+    font-size: 2.5em;
   }
 }
 
@@ -129,9 +129,12 @@ body {
 }
 
 .socials i {
+  width: 100%;
+  display: inline;
   margin: 1em 0 0 0.5em;
-  justify-content: center;
-  align-items: center;
+  text-align: right;
+  justify-content: right;
+  align-items: right;
   transition: transform 0.1s ease-in-out;
 }
 
@@ -140,7 +143,14 @@ body {
 }
 
 .buttons {
+  width: 100%;
   display: inline-flex;
+  font-family: Helvetica;
+  font-style: italic;
+  justify-content: end;
+  align-items: end;
+  margin-bottom: 3%;
+  margin-right: -1%;
 }
 
 .cover {
@@ -171,12 +181,12 @@ body {
   height: 100%;
   width: 100%;
   background: black;
-  position: relative; /* Add this line to make .content the positioned ancestor */
+  position: relative;
   display: inline-flex;
   /* 171717 */
 }
 
-/* scroll button */
+/* ! Scroll button */
 
 .scroll_btn {
   bottom: 5%;
@@ -184,7 +194,7 @@ body {
   height: 50px;
   border-radius: 50%;
   border: none;
-  font-weight: 600;
+  /* font-weight: 600; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,6 +208,7 @@ body {
   transition-duration: 0.2s;
   overflow: hidden;
   position: absolute;
+  z-index: 1000000;
 }
 
 .svgArrow {
@@ -210,7 +221,6 @@ body {
   width: 140px;
   border-radius: 50px;
   transition-duration: 0.1s;
-  /* background-color: rgb(255, 255, 255); */
   background-color: rgb(0, 0, 0, 0.2);
 
   align-items: center;
@@ -225,15 +235,16 @@ body {
 .scroll_btn::before {
   position: absolute;
   bottom: -20px;
-  content: "VIEW WEBSITE";
+  content: "View Website";
   color: white;
   transition-duration: 0.2s;
   font-size: 0px;
   background: transparent;
+  font-family: Timesi;
 }
 
 .scroll_btn:hover::before {
-  font-size: 13px;
+  font-size: 18px;
   opacity: 1;
   bottom: unset;
   /* transform: translateY(-30px); */
@@ -281,70 +292,22 @@ body {
   src: url("/fonts/timesbi.ttf") format("truetype");
 }
 
-/* Responsive Styles */
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: hsla(195, 100%, 50%, 1);
-    background-image: radial-gradient(
-        at 88% 5%,
-        hsla(204, 100%, 50%, 1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
-      radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
-      radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
-      radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
-      radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
-      radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
-  }
-
-  .my_portfolio {
-    font-size: 3em;
-  }
-
-  .aryan_randeriya {
-    font-size: 8em;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  body {
-    background-color: hsla(195, 100%, 50%, 1);
-    background-image: radial-gradient(
-        at 88% 5%,
-        hsla(204, 100%, 50%, 1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
-      radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
-      radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
-      radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
-      radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
-      radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
-  }
-
-  .my_portfolio {
-    font-size: 2em;
-  }
-
-  .aryan_randeriya {
-    font-size: 6em;
-  }
-}
-
 /* ! Perspective text */
 
 .right {
+  margin-top: -5%;
   /* float: right; */
   flex-grow: 1;
   height: 100%;
-  text-align: center;
+  text-align: right;
   justify-content: center;
   align-items: center;
+  margin-right: 5%;
 }
 
 .left {
+  margin-top: -5%;
+
   /* float: left; */
   flex-grow: 1;
   height: 100%;
@@ -412,4 +375,56 @@ p {
 
 .perspective-line:nth-child(5) {
   left: 145px;
+}
+
+/*! Responsive Styles */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: hsla(195, 100%, 50%, 1);
+    background-image: radial-gradient(
+        at 88% 5%,
+        hsla(204, 100%, 50%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
+      radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
+      radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
+  }
+
+  .my_portfolio {
+    font-size: 3em;
+  }
+
+  .aryan_randeriya {
+    font-size: 8em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: hsla(195, 100%, 50%, 1);
+    background-image: radial-gradient(
+        at 88% 5%,
+        hsla(204, 100%, 50%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
+      radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
+      radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
+      radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%);
+  }
+
+  .my_portfolio {
+    font-size: 2em;
+  }
+
+  .aryan_randeriya {
+    font-size: 6em;
+  }
 }

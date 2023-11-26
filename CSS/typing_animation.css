@@ -12,14 +12,15 @@
 
 .typing_animation {
   color: white;
+  width: 100%;
   /* font: bold 300% Consolas, Monaco, monospace; */
   font: bold 300% Helvetica;
   font-size: 8em;
-  border-right: 0.1em solid rgb(255, 255, 255);
-  width: 16ch;
+  /* border-right: 0.1em solid rgb(255, 255, 255); */
+  /* width: 16ch; */
   /* margin: 2em; */
   margin-top: 3em;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   white-space: nowrap;
   overflow: hidden;
 
@@ -28,7 +29,7 @@
   align-items: right;
   text-transform: uppercase;
 
-  /* animation: typing 1s steps(0, end),
+  /* animation: typing 1s steps(14, end),
     blink-caret 0.5s step-end infinite alternate;
 
   -webkit-animation: typing 1s steps(14, end),
@@ -36,10 +37,12 @@
 }
 
 .animation_paragraph {
+  width: 100%;
   font: bold 100% Consolas, Monaco, monospace;
   color: white;
+  font-size: 1.3em;
   border-right: 0.2em solid rgb(255, 255, 255);
-  width: 100ch;
+  /* width: 115ch; */
   white-space: nowrap;
   overflow: hidden;
 

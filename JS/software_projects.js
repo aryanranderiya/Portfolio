@@ -39,7 +39,6 @@ function processDataAndHidePreloader(snapshot) {
     console.log("Project Type:", projectType);
     console.log("Github Link:", githubLink);
 
-    
     const card = document.createElement("div");
     card.innerHTML = `
       <div class="card cardhidden">
@@ -79,6 +78,7 @@ function processDataAndHidePreloader(snapshot) {
   const terminal_bling = document.querySelector(".terminal_bling");
 
   setTimeout(function () {
+    // ! UNCOMMENT
     blackCover.classList.remove("visible");
     document.body.style.overflow = "auto";
 
@@ -92,6 +92,11 @@ function processDataAndHidePreloader(snapshot) {
       });
   }, 1000);
 }
+
+// ! REMOVE
+// const blackCover = document.querySelector(".black_cover");
+// blackCover.classList.remove("visible");
+// document.body.style.overflow = "auto";
 
 document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });

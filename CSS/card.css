@@ -188,18 +188,18 @@ GLOW
   outline-color: #3ddc84;
   outline-width: 2px;
   outline-style: solid;
-  border-radius: 1em;
+  border-radius: 5em;
   padding: 5px 20px;
-  /* text-align: center; */
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.9em;
   margin-bottom: 20px;
 }
 
 #type-logo {
   margin-right: 1em;
-  scale: 1.5;
+  scale: 1.2;
 }
+
 .card-desc {
   margin-top: 0.5em;
   color: #b8b8b8;

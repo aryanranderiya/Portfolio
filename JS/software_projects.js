@@ -41,18 +41,23 @@ function processDataAndHidePreloader(snapshot) {
 
     const card = document.createElement("div");
     card.innerHTML = `
-      <div class="card" id="card">
-        <div class="image"></div>
-          <div class="content">
-              <a href="#"> <span class="card_title">${projectTitle}</span></a>
-              <p class="card_desc">${projectDesc} </p>
+      <div class="card">
+          <div class="card-content">
+              <div class="card-image"> </div>
+              <div class="card-info-wrapper">
+                  <div class="card-info">
+                      <div class="card-info-title">
+                          <h3 class="card-title">${projectTitle}</h3>
+                          <h4 class="card-desc">${projectDesc}<h4>
+                      </div>
+                  </div>
+                  <div class="btns">
+                      <a class="action secondary" href="${githubLink}">Github Repo<span aria-hidden="true" class="icon_btn">
+                              <i class="fa-brands fa-github fa-2x"></i> </span></a>
 
-              <div class="btns">
-                  <a class="action secondary" href="${githubLink}" target="_blank">Github Repo<span aria-hidden="true" class="icon_btn"> <i
-                              class="fa-brands fa-github fa-2x"></i> </span></a>
-
-                  <a class="action primary" href="#">View Project<span aria-hidden="true" class="icon_btn">
-                          <span class="material-symbols-outlined fa-1x">open_in_new</span></a>
+                      <a class="action primary" href="#">View Project<span aria-hidden="true" class="icon_btn">
+                              <span class="material-symbols-outlined fa-1.5x">open_in_new</span></a>
+                  </div>
               </div>
           </div>
       </div>
@@ -67,12 +72,14 @@ function processDataAndHidePreloader(snapshot) {
   // preloader.style.display = "none";
   // content.style.display = "block";
 
-  //! const blackCover = document.querySelector(".black_cover");
+  const blackCover = document.querySelector(".black_cover");
 
   const terminal_bling = document.querySelector(".terminal_bling");
 
   setTimeout(function () {
     // ! ABOVE
+    blackCover.classList.remove("visible");
+    document.body.style.overflow = "auto";
 
     // blackCover.classList.remove("visible");
     // document.body.style.overflow = "auto";
@@ -89,11 +96,6 @@ function processDataAndHidePreloader(snapshot) {
 }
 
 // ! MOVE THIS LINE ABOVE
-const blackCover = document.querySelector(".black_cover");
-
-blackCover.classList.remove("visible");
-document.body.style.overflow = "auto";
-// !
 
 document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
@@ -112,12 +114,27 @@ window.addEventListener("scroll", function () {
 //! Software Projects Title
 
 software_projects_title.addEventListener("mouseover", () => {
-  cursor.style.transform = "scale(0)";
+  cursor.style.transform = "scale(10)";
   cursor.style.mixBlendMode = "difference";
   cursor.style.boxShadow = "none";
 });
 
 software_projects_title.addEventListener("mouseout", () => {
+  cursor.style.transform = "none";
+  cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 50px white";
+});
+
+//! Cards Cursor Title
+
+const card = querySelector(".card");
+card.addEventListener("mouseover", () => {
+  cursor.style.transform = "scale(0)";
+  cursor.style.mixBlendMode = "difference";
+  cursor.style.boxShadow = "none";
+});
+
+card.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 50px white";

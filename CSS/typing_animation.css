@@ -12,30 +12,40 @@
 
 .typing_animation {
   color: white;
-  font: bold 300% Consolas, Monaco, monospace;
+  /* font: bold 300% Consolas, Monaco, monospace; */
+  font: bold 300% Helvetica;
+  font-size: 8em;
   border-right: 0.1em solid rgb(255, 255, 255);
-  width: 13.2ch;
+  width: 16ch;
   /* margin: 2em; */
   margin-top: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 5%;
   white-space: nowrap;
   overflow: hidden;
 
-  animation: typing 1s steps(14, end),
+  text-align: right;
+  justify-content: right;
+  align-items: right;
+  text-transform: uppercase;
+
+  /* animation: typing 1s steps(0, end),
     blink-caret 0.5s step-end infinite alternate;
 
   -webkit-animation: typing 1s steps(14, end),
-    blink-caret 0.5s step-end infinite alternate;
+    blink-caret 0.5s step-end infinite alternate; */
 }
 
 .animation_paragraph {
   font: bold 100% Consolas, Monaco, monospace;
   color: white;
   border-right: 0.2em solid rgb(255, 255, 255);
-  width: 115ch;
+  width: 100ch;
   white-space: nowrap;
   overflow: hidden;
 
+  text-align: right;
+  justify-content: right;
+  align-items: right;
   animation: typing 1s steps(14, end),
     blink-caret 0.5s step-end infinite alternate;
 

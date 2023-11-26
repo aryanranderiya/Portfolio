@@ -122,3 +122,21 @@ software_projects_title.addEventListener("mouseout", () => {
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 50px white";
 });
+
+//! Cards Cursor Title
+document.addEventListener("mouseover", function (event) {
+  if (event.target.classList.contains("card")) {
+    cursor.style.transform = "scale(0.3)";
+    // cursor.style.mixBlendMode = "difference";
+    cursor.style.boxShadow =
+      "0px 0px 20px white, 0px 0px 50px white, 0px 0px 60px white,  0px 0px 70px white,0px 0px 80px white";
+  }
+});
+
+document.addEventListener("mouseout", function (event) {
+  if (event.target.classList.contains("card")) {
+    cursor.style.transform = "none";
+    // cursor.style.mixBlendMode = "normal";
+    cursor.style.boxShadow = "0px 0px 30px white";
+  }
+});

@@ -41,7 +41,7 @@ function processDataAndHidePreloader(snapshot) {
 
     const card = document.createElement("div");
     card.innerHTML = `
-      <div class="card">
+      <div class="card cardhidden">
           <div class="card-content">
               <div class="card-image"> </div>
               <div class="card-info-wrapper">
@@ -63,7 +63,7 @@ function processDataAndHidePreloader(snapshot) {
       </div>
     `;
 
-    document.getElementById("cards").appendChild(card);
+    document.querySelector(".cards").appendChild(card);
   });
 
   // const preloader = document.querySelector(".preloader");
@@ -73,11 +73,9 @@ function processDataAndHidePreloader(snapshot) {
   // content.style.display = "block";
 
   const blackCover = document.querySelector(".black_cover");
-
   const terminal_bling = document.querySelector(".terminal_bling");
 
   setTimeout(function () {
-    // ! ABOVE
     blackCover.classList.remove("visible");
     document.body.style.overflow = "auto";
 
@@ -95,8 +93,6 @@ function processDataAndHidePreloader(snapshot) {
   }, 1000);
 }
 
-// ! MOVE THIS LINE ABOVE
-
 document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
 });
@@ -105,9 +101,11 @@ var cards = document.querySelector(".cards");
 
 window.addEventListener("scroll", function () {
   if (window.scrollY == 0) {
-    cards.classList.remove("visible");
+    cards.classList.add("cardhidden");
+    cards.classList.remove("cardhicardvisibledden");
   } else {
-    cards.classList.add("visible");
+    cards.classList.remove("cardhidden");
+    cards.classList.add("cardvisible");
   }
 });
 
@@ -120,21 +118,6 @@ software_projects_title.addEventListener("mouseover", () => {
 });
 
 software_projects_title.addEventListener("mouseout", () => {
-  cursor.style.transform = "none";
-  cursor.style.mixBlendMode = "normal";
-  cursor.style.boxShadow = "0px 0px 50px white";
-});
-
-//! Cards Cursor Title
-
-const card = querySelector(".card");
-card.addEventListener("mouseover", () => {
-  cursor.style.transform = "scale(0)";
-  cursor.style.mixBlendMode = "difference";
-  cursor.style.boxShadow = "none";
-});
-
-card.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 50px white";

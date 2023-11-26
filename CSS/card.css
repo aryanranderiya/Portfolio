@@ -9,16 +9,6 @@
   position: relative;
 }
 
-.cards.visible {
-  visibility: visible;
-  opacity: 1;
-}
-
-.cards.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-}
 
 .card {
   max-width: 400px;
@@ -38,13 +28,6 @@
 
 .card a {
   text-decoration: none;
-}
-
-.content {
-  padding: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .image {
@@ -131,7 +114,7 @@ GLOW
  */
 
 :root {
-  --card-color: rgb(23, 23, 23);
+  --card-color: #212121;
 }
 
 /* body {
@@ -145,66 +128,76 @@ GLOW
   padding: 0px;
 } */
 
-#cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
   margin-left: 5% !important;
-  /* opacity: 0; */
-  /* transition: opacity 0.2s ease-in-out; */
   margin-bottom: 5em;
   position: relative;
   margin-top: 5em;
   z-index: 1;
   cursor: none;
+  transition: visibility 0.5s, opacity 0.5s ease;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1em;
+  display: flex;
+  max-width: 400px;
+  min-width: 400px;
+  max-height: 450px;
+  min-height: 450px;
+  flex-direction: column;
+  position: relative;
+}
+
+.cards.cardvisible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cards.cardhidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 #cards:hover > .card::after {
   opacity: 1;
 }
 
+.card-title {
+  color: white;
+  font-size: 1.9em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+}
+
 .card-desc {
   margin-top: 0.5em;
   color: #b8b8b8;
-  font-size: 1.5em;
+  font-size: 1em;
   line-height: 2.25rem;
-  min-height: 80px;
-  max-height: 10px;
+  height: 9em;
   overflow: hidden;
   flex-wrap: wrap;
   text-overflow: ellipsis;
 }
 
-.card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 1em;
-  cursor: pointer;
-  display: flex;
-  max-width: 400px;
-  min-width: 400px;
-  max-height: 400px;
-  min-height: 400px;
-  flex-direction: column;
-  position: relative;
-}
-
-.card-title {
-  color: white;
-  font-size: 3em;
-  /* margin-top: 2.5em; */
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .btns {
-  display: flex;
+  display: inline-flex;
   width: 100%;
-  margin-top: auto;
+  /* margin-top: auto; */ /* Remove this line */
   align-items: center;
+  margin-top: 2em;
 }
 
 .action {
@@ -215,29 +208,38 @@ GLOW
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 1em;
-  padding: 3% 0%;
+  padding: 2% 0%;
   justify-content: center;
   flex-grow: 1;
+  margin: 0 5px;
 }
 
 .action.primary {
   background-color: #00bbff;
-  color: white;
-  margin-left: 1%;
+  color: #bcedff;
   z-index: 1001;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: #4dcfff;
+  transition: color 0.2s ease, outline-color 0.3s ease;
 }
 
 .action.secondary {
   background-color: #171717;
   color: #999999;
-  margin-right: 1%;
   outline-color: #999999;
   outline-width: 2px;
   outline-style: solid;
   z-index: 1001;
+  transition: color 0.2s ease, outline-color 0.3s ease;
 }
 
 .action.secondary:hover {
+  color: white;
+  outline-color: white;
+}
+
+.action.primary:hover {
   color: white;
   outline-color: white;
 }
@@ -322,6 +324,7 @@ GLOW
   align-items: flex-start;
   display: flex;
   gap: 10px;
+  margin-top: auto; /* Add this line */
 }
 
 .card-info > i {

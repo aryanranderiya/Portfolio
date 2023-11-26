@@ -181,6 +181,25 @@ GLOW
   text-align: left;
 }
 
+.card-type {
+  width: fit-content;
+  background: transparent;
+  color: #3ddc84;
+  outline-color: #3ddc84;
+  outline-width: 2px;
+  outline-style: solid;
+  border-radius: 1em;
+  padding: 5px 20px;
+  /* text-align: center; */
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+#type-logo {
+  margin-right: 1em;
+  scale: 1.5;
+}
 .card-desc {
   margin-top: 0.5em;
   color: #b8b8b8;

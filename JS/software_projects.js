@@ -42,25 +42,33 @@ function processDataAndHidePreloader(snapshot) {
     const card = document.createElement("div");
     card.innerHTML = `
       <div class="card cardhidden">
-          <div class="card-content">
-              <div class="card-image"> </div>
-              <div class="card-info-wrapper">
-                  <div class="card-info">
-                      <div class="card-info-title">
-                          <h3 class="card-title">${projectTitle}</h3>
-                          <h4 class="card-desc">${projectDesc}<h4>
-                      </div>
-                  </div>
-                  <div class="btns">
-                      <a class="action secondary" target="_blank" href="${githubLink}">Github Repo<span aria-hidden="true" class="icon_btn">
-                              <i class="fa-brands fa-github fa-2x"></i> </span></a>
+                <div class="card-content">
+                    <div class="card-image"> </div>
+                    <div class="card-info-wrapper">
+                        <div class="card-info">
+                            <div class="card-info-title">
+                                <h3 class="card-title">${projectTitle}</h3>
+                                <div class="card-type">
+                                    <i id="type-logo" class="fa-brands fa-android" style="color: #3ddc84;"></i>
+                                    <text>Android</text>
+                                </div>
+                                <h4 class="card-desc">${projectDesc}<h4>
 
-                      <a class="action primary" target="_blank" href="https://github.com/aryanranderiya">View Project<span aria-hidden="true" class="icon_btn">
-                              <span class="material-symbols-outlined fa-1.5x">open_in_new</span></a>
-                  </div>
-              </div>
-          </div>
-      </div>
+                            </div>
+
+                        </div>
+                        <div class="btns">
+                            <a class="action secondary" target="_blank" href="${githubLink}">Github Repo<span
+                                    aria-hidden="true" class="icon_btn">
+                                    <i class="fa-brands fa-github fa-2x"></i> </span></a>
+
+                            <a class="action primary" target="_blank" href="https://github.com/aryanranderiya">View
+                                Project<span aria-hidden="true" class="icon_btn">
+                                    <span class="material-symbols-outlined fa-1.5x">open_in_new</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     `;
 
     document.querySelector(".cards").appendChild(card);

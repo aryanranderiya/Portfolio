@@ -138,10 +138,11 @@ software_projects_title.addEventListener("mouseout", () => {
 
 document.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("card")) {
-    cursor.style.transform = "scale(0.3)";
+    cursor.style.transform = "scale(1)";
     // cursor.style.mixBlendMode = "difference";
     cursor.style.boxShadow =
-      "0px 0px 20px white, 0px 0px 50px white, 0px 0px 60px white,  0px 0px 70px white,0px 0px 80px white";
+      "0px 0px 20px white, 0px 0px 35px white, 0px 0px 50px white, 0px 0px 60px white,  0px 0px 70px white,0px 0px 80px white,0px 0px 95px white, 0px 0px 110px white";
+    //       "0px 0px 20px white, 0px 0px 35px white,0px 0px 50px white, 0px 0px 65px white,  0px 0px 80px white,0px 0px 95px white, 0px 0px 110px white,";
   }
 });
 

@@ -111,8 +111,7 @@
   color: #4878c0;
 }
 
-.terminal_bling,
-a {
+.terminal_bling {
   color: #dddddd;
   font-family: Hack, monospace;
 }

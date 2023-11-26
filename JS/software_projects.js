@@ -52,10 +52,10 @@ function processDataAndHidePreloader(snapshot) {
                       </div>
                   </div>
                   <div class="btns">
-                      <a class="action secondary" href="${githubLink}">Github Repo<span aria-hidden="true" class="icon_btn">
+                      <a class="action secondary" target="_blank" href="${githubLink}">Github Repo<span aria-hidden="true" class="icon_btn">
                               <i class="fa-brands fa-github fa-2x"></i> </span></a>
 
-                      <a class="action primary" href="#">View Project<span aria-hidden="true" class="icon_btn">
+                      <a class="action primary" target="_blank" href="https://github.com/aryanranderiya">View Project<span aria-hidden="true" class="icon_btn">
                               <span class="material-symbols-outlined fa-1.5x">open_in_new</span></a>
                   </div>
               </div>

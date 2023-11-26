@@ -66,21 +66,12 @@ function processDataAndHidePreloader(snapshot) {
     document.querySelector(".cards").appendChild(card);
   });
 
-  // const preloader = document.querySelector(".preloader");
-  // const content = document.getElementById("content");
-
-  // preloader.style.display = "none";
-  // content.style.display = "block";
-
   const blackCover = document.querySelector(".black_cover");
   const terminal_bling = document.querySelector(".terminal_bling");
 
   setTimeout(function () {
     blackCover.classList.remove("visible");
     document.body.style.overflow = "auto";
-
-    // blackCover.classList.remove("visible");
-    // document.body.style.overflow = "auto";
 
     terminal_bling.classList.add("animation_paragraph");
 
@@ -98,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 var cards = document.querySelector(".cards");
-
 window.addEventListener("scroll", function () {
   if (window.scrollY == 0) {
     cards.classList.add("cardhidden");
@@ -124,6 +114,7 @@ software_projects_title.addEventListener("mouseout", () => {
 });
 
 //! Cards Cursor Title
+
 document.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("card")) {
     cursor.style.transform = "scale(0.3)";

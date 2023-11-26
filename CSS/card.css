@@ -149,8 +149,8 @@ GLOW
   display: flex;
   max-width: 400px;
   min-width: 400px;
-  max-height: 450px;
-  min-height: 450px;
+  max-height: 500px;
+  min-height: 500px;
   flex-direction: column;
   position: relative;
 }
@@ -181,22 +181,45 @@ GLOW
   text-align: left;
 }
 
-.card-type {
-  width: fit-content;
+/* .card-type {
+  width: 100%;
   background: transparent;
-  color: #3ddc84;
-  outline-color: #3ddc84;
+  border-radius: 1em;
   outline-width: 2px;
   outline-style: solid;
-  border-radius: 5em;
-  padding: 5px 20px;
-  font-weight: bold;
-  font-size: 0.9em;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} */
+
+.card-type {
+  width: 100%;
+  display: flex;
+  gap: 2em;
 }
 
-#type-logo {
-  margin-right: 1em;
+.subtype {
+  flex-grow: 1;
+  border-radius: 10em;
+  outline-width: 2px;
+  outline-style: solid;
+  /* padding: 0 1em; */
+  margin: 1em 0 1em 0.5em; /* top left   bottom right*/
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtype.android {
+  color: #3ddc84;
+  outline-color: #3ddc84;
+  scale: 1.2;
+}
+
+.java {
+  color: #f89820;
+  outline-color: #f89820;
   scale: 1.2;
 }
 
@@ -214,7 +237,6 @@ GLOW
 .btns {
   display: inline-flex;
   width: 100%;
-  /* margin-top: auto; */ /* Remove this line */
   align-items: center;
   margin-top: 2em;
 }
@@ -321,7 +343,7 @@ GLOW
   background-position: center;
   background-size: cover;
   border-radius: 1em;
-  /* min-height: 150px; */
+  min-height: 150px;
   /* width: 100%; */
   background-color: #00bbff;
 }

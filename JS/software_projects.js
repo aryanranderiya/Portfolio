@@ -39,6 +39,7 @@ function processDataAndHidePreloader(snapshot) {
     console.log("Project Type:", projectType);
     console.log("Github Link:", githubLink);
 
+    
     const card = document.createElement("div");
     card.innerHTML = `
       <div class="card cardhidden">

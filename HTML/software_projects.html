@@ -11,7 +11,6 @@
     <link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/software_projects.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/terminal_card.css'>
-    <link rel='stylesheet' type='text/css' href='/CSS/card.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/preloader.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/typing_animation_projects.css'>
     <link rel='stylesheet' type='text/css' href='/CSS/cursor.css'>
@@ -80,28 +79,9 @@
             </div>
         </div>
 
-        <!-- Project Cards
-        <div class="cards" id="cards">
-
-            <div class="card" id="card">
-                <div class="image"></div>
-                <div class="content">
-                    <a href="#"> <span class="card_title">Project Title </span></a>
-                    <p class="card_desc">Description</p>
-
-                    <div class="btns">
-                        <a class="action secondary" href="#">Github Repo<span aria-hidden="true" class="icon_btn"> <i
-                                    class="fa-brands fa-github fa-2x"></i> </span></a>
-
-                        <a class="action primary" href="#">View Project<span aria-hidden="true" class="icon_btn">
-                                <span class="material-symbols-outlined fa-1x">open_in_new</span></a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div class="cards cardhidden">
-            <div class="card cardhidden">
+
+            <!-- <div class="card cardhidden">
                 <div class="card-content">
                     <div class="card-image"> </div>
                     <div class="card-info-wrapper">
@@ -109,9 +89,9 @@
                             <div class="card-info-title">
                                 <h3 class="card-title">${projectTitle}</h3>
                                 <div class="card-type">
-                                    <div class="subtype web">
-                                        <i id="type-logo" class="fa-brands fa-android"></i>
-                                        Web
+                                    <div class="subtype ${projectType.toLowerCase()}">
+                                        <i id="type-logo" class="${projectType_icon}"></i>
+                                        <text>${projectType}</text>
                                     </div>
                                 </div>
 
@@ -130,7 +110,7 @@
                                 <span class="material-symbols-outlined fa-1.5x">open_in_new</span></a>
                     </div>
                 </div>
-            </div>
+        </div> -->
         </div>
 
     </div>
@@ -141,6 +121,7 @@
     <script src="/JS/cursor.js"></script>
     <script src="/JS/cards.js"></script>
     <script src="/JS/software_projects.js" type="module"></script>
+    <link rel='stylesheet' type='text/css' href='/CSS/card.css'>
 
 </body>
 

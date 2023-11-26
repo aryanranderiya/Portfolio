@@ -34,41 +34,48 @@ function processDataAndHidePreloader(snapshot) {
     var projectType = projectDetails.project_type;
     var githubLink = projectDetails.github_link;
 
-    console.log("Project Desc:", projectDesc);
-    console.log("Project Title:", projectTitle);
-    console.log("Project Type:", projectType);
-    console.log("Github Link:", githubLink);
+    var projectType_icon;
+    if (projectType.toLowerCase() == "web") {
+      projectType_icon = "fa-brands fa-html5";
+    } else if (projectType.toLowerCase() == "python") {
+      projectType_icon = "fa-brands fa-python";
+    } else if (projectType.toLowerCase() == "android") {
+      projectType_icon = "fa-brands fa-android";
+    }
 
+    console.log("type:" + projectType);
     const card = document.createElement("div");
     card.innerHTML = `
       <div class="card cardhidden">
-                <div class="card-content">
-                    <div class="card-image"> </div>
-                    <div class="card-info-wrapper">
-                        <div class="card-info">
-                            <div class="card-info-title">
-                                <h3 class="card-title">${projectTitle}</h3>
-                                <div class="card-type">
-                                    <i id="type-logo" class="fa-brands fa-android" style="color: #3ddc84;"></i>
-                                    <text>Android</text>
-                                </div>
-                                <h4 class="card-desc">${projectDesc}<h4>
-
+        <div class="card-content">
+            <div class="card-image"> </div>
+            <div class="card-info-wrapper">
+                <div class="card-info">
+                    <div class="card-info-title">
+                        <h3 class="card-title">${projectTitle}</h3>
+                        <div class="card-type">
+                            <div class="subtype ${projectType.toLowerCase()}">
+                                <i id="type-logo" class="${projectType_icon}"></i>
+                                <text>${projectType}</text>
                             </div>
-
                         </div>
-                        <div class="btns">
-                            <a class="action secondary" target="_blank" href="${githubLink}">Github Repo<span
-                                    aria-hidden="true" class="icon_btn">
-                                    <i class="fa-brands fa-github fa-2x"></i> </span></a>
 
-                            <a class="action primary" target="_blank" href="https://github.com/aryanranderiya">View
-                                Project<span aria-hidden="true" class="icon_btn">
-                                    <span class="material-symbols-outlined fa-1.5x">open_in_new</span></a>
-                        </div>
                     </div>
+                    <h4 class="card-desc">${projectDesc}<h4>
                 </div>
+
             </div>
+            <div class="btns">
+                <a class="action secondary" target="_blank" href="${githubLink}">Github Repo<span
+                        aria-hidden="true" class="icon_btn">
+                        <i class="fa-brands fa-github fa-2x"></i> </span></a>
+
+                <a class="action primary" target="_blank" href="https://github.com/aryanranderiya">View
+                    Project<span aria-hidden="true" class="icon_btn">
+                        <span class="material-symbols-outlined fa-1.5x">open_in_new</span></a>
+            </div>
+        </div>
+    </div>
     `;
 
     document.querySelector(".cards").appendChild(card);

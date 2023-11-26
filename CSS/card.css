@@ -189,11 +189,11 @@ GLOW
 
 .subtype {
   width: fit-content;
-  flex-grow: 0.3;
+  flex-grow: 0.1;
   border-radius: 10em;
   outline-width: 2px;
   outline-style: solid;
-  margin: 1em 0 1em 1em; /* top right bottom left*/
+  margin: 0.5em 0 1em 1em; /* top right bottom left*/
   font-size: 0.8em;
   justify-content: center;
   align-items: center;
@@ -208,20 +208,26 @@ GLOW
 
 .subtype.java {
   color: #f89820;
-  outline-color: #f89820;
+  outline-color: #5382a1;
+  /* outline-color: -webkit-linear-gradient(#f89820, #5382a1); */
 }
 
 .subtype.web {
-  color: #006eff;
-  outline-color: #006eff;
+  color: #e34c26;
+  outline-color: #e34c26;
+}
+
+.subtype.python {
+  color: #ffde57;
+  outline-color: #4584b6;
 }
 
 .card-desc {
-  margin-top: 0.5em;
+  margin: 0.5em 0 0 0.5em; /* top right bottom left*/
   color: #b8b8b8;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 2.25rem;
-  height: 9em;
+  height: 8em;
   overflow: hidden;
   flex-wrap: wrap;
   text-overflow: ellipsis;
@@ -354,12 +360,12 @@ GLOW
   /* padding: 0px 10px; */
 }
 
-.card-info {
+/* .card-info {
   align-items: flex-start;
   display: flex;
   gap: 10px;
-  margin-top: auto; /* Add this line */
-}
+  margin-top: auto; 
+} */
 
 .card-info > i {
   font-size: 1em;

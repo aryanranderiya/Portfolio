@@ -161,6 +161,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* z-index: 5000; */
 }
 
 .title_heading_1 {
@@ -183,7 +184,6 @@ body {
   background: black;
   position: relative;
   display: inline-flex;
-  /* 171717 */
 }
 
 /* ! Scroll button */
@@ -208,7 +208,7 @@ body {
   transition-duration: 0.2s;
   overflow: hidden;
   position: absolute;
-  z-index: 1000000;
+  z-index: 10000;
 }
 
 .svgArrow {

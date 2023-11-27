@@ -5,19 +5,19 @@ body {
 .black_cover {
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
   position: absolute;
   opacity: 0;
   transition: opacity 0.3s ease-out;
   z-index: -1;
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(15.2px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .black_cover.visible {
   opacity: 1;
-  z-index: 100000;
+  z-index: 1000000;
 }
 
 .preloader {
@@ -27,7 +27,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20%; */
 }
 
 /* Box */

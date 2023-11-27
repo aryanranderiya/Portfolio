@@ -1,3 +1,24 @@
+// $(window).scroll(function () {
+//   if ($(this).scrollTop() > 1000) {
+//     document.getElementById("navbarContainer").style.display = "hidden";
+//     console.log("debug1");
+//   } else {
+//     document.getElementById("navbarContainer").style.display = "visible";
+//     console.log("debug2");
+//   }
+// });
+window.addEventListener("scroll", function () {
+  // console.log("debug0");
+
+  if (window.scrollY > 1000) {
+    document.getElementById("navbarContainer").style.display = "none";
+    console.log("debug1");
+  } else {
+    document.getElementById("navbarContainer").style.display = "block";
+    console.log("debug2");
+  }
+});
+
 function scrollToContent() {
   const contentElement = document.querySelector(".content");
 

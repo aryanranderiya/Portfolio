@@ -56,11 +56,9 @@ function setActiveLink() {
 
     if (pathName === href) {
       item.classList.add("active");
-      // menu_item.classList.add("active");
       console.log("Active class added in menu");
     } else {
       item.classList.remove("active");
-      // menu_item.classList.remove("active");
     }
   });
 }

@@ -13,8 +13,10 @@ function handleIntersection(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("fade-in");
+      entry.target.classList.add("zoom-out");
     } else {
       entry.target.classList.remove("fade-in");
+      entry.target.classList.remove("zoom-out");
     }
   });
 }

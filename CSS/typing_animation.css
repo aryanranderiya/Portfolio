@@ -22,7 +22,7 @@
   color: white;
   width: 100%;
   /* font: bold 300% Consolas, Monaco, monospace; */
-  font-size: 8em;
+  font-size: 7em;
   /* border-right: 0.1em solid rgb(255, 255, 255); */
   /* width: 16ch; */
   /* margin: 2em; */
@@ -48,7 +48,7 @@
   /* font: bold 100% Consolas, Monaco, monospace; */
   color: white;
   font-family: Helvetica;
-  font-size: 1.7em;
+  font-size: 1.3em;
   border-right: 0.2em solid rgb(255, 255, 255);
   /* width: 115ch; */
   white-space: nowrap;

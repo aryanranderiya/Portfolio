@@ -1,75 +1,67 @@
-<body>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
+<link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
 
-    <!-- Navigation Bar -->
+<!-- Navigation Bar -->
 
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" style='background-color: #171717;'>
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
-                    Aryan Randeriya
-                </a>
-            </div>
+<div class="navbar_menu">
 
-            <ul class="nav navbar-nav pull-right">
-                <li class="nav-icon">
-                    <a class="d-flex align-items-center" href="index.html">
-                        <div class="nav-icon-container">
-                            <span class="nav-icon-text"><b>Home</b></span>
-
-                            <span class="material-symbols-outlined">
-                                home
-                            </span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-icon active-home"> <!-- Add a class -->
-                    <a class="d-flex align-items-center" href="software_projects.html">
-                        <div class="nav-icon-container">
-                            <span class="nav-icon-text"><b>Software Projects</b></span>
-                            <span class="material-symbols-outlined">
-                                terminal
-                            </span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-icon">
-                    <a class="d-flex align-items-center" href="design_projects.html">
-                        <div class="nav-icon-container">
-                            <span class="nav-icon-text"><b>Design Projects</b></span>
-                            <span class="material-symbols-outlined">
-                                palette
-                            </span>
-                        </div>
-                    </a>
-                </li>
-                <!-- <li class="nav-icon">
-                <a class="d-flex align-items-center" href="#">
-                    <div class="nav-icon-container">
-                        <span class="nav-icon-text"><b>Contact Me</b></span>
-                        <span class="material-symbols-outlined">
-                            contacts
-                        </span>
-                    </div>
-                </a>
-            </li> -->
-
-                <div class="background">
-                    <button class="menu__icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </ul>
+    <div class="menu_items">
+        <div class="item">
+            <h1 class="menu_item">HOME</h1>
         </div>
-    </nav>
+        <hr class="horizontal_line">
 
-    <script>console.log("2Script is running");
-    </script>
+        <div class="item">
+            <h1 class="menu_item">About</h1>
+        </div>
+        <hr class="horizontal_line">
 
-</body>
+        <div class="item">
+            <a href="/HTML/software_projects.html">
+                <h1 class="menu_item active">Software Projects</h1>
+            </a>
+        </div>
+        <hr class="horizontal_line">
+
+        <div class="item">
+            <h1 class="menu_item">Design</h1>
+        </div>
+        <hr class="horizontal_line">
+
+        <div class="item">
+            <h1 class="menu_item">Contact</h1>
+        </div>
+        <hr class="horizontal_line">
+    </div>
+
+
+</div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style='background-color: #171717;'>
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <div class="website-title">
+                    Aryan Randeriya
+                </div>
+            </a>
+        </div>
+
+
+        <div class="navbar_menu_btn">
+            <label class="hamburger">
+                <input type="checkbox" id="hamburgerCheckbox" unchecked>
+                <svg viewBox="0 0 32 32" id="hamburgerSvg">
+                    <path class="line line-top-bottom"
+                        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                    </path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+        </div>
+    </div>
+</nav>

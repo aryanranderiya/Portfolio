@@ -1,6 +1,11 @@
 * {
   font-family: "Helvetica";
 }
+
+a {
+  text-decoration: none !important;
+}
+
 .website-title {
   /* width: 100%; */
   color: grey;
@@ -8,7 +13,7 @@
   font-size: 20px;
   position: absolute;
   /* margin-top: 0.5%; */
-  left: 45%;
+  align-items: center;
   justify-content: center;
   transition: color 0.3s ease-in-out;
 }
@@ -26,13 +31,9 @@
 }
 
 .navbar_menu {
-  /* height: 100vh;
-  width: 100vw; */
   opacity: 0;
   visibility: hidden;
-  /* position: absolute; */
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-
   position: fixed;
   height: 100%;
   width: 100%;
@@ -109,14 +110,18 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
+  /* margin-top: 3%; */
 }
 
 .menu_item {
   width: 100%;
-  /* color: grey; */
-  font-size: 9em;
+  font-size: 8em;
   font-weight: bolder !important;
   text-transform: uppercase;
+  color: #2c3031;
+  background-color: transparent;
+  margin: -0.1em 0 -0.1em 0;
 }
 
 .menu_item.active {
@@ -132,9 +137,7 @@ a {
 .menu_item:hover {
   color: white;
   transition: color 0.3s ease-in-out;
-
   font-family: Timesi;
-
   font-style: italic;
 }
 
@@ -143,4 +146,10 @@ a {
   height: 1px;
   background-color: black;
   border: none;
+}
+
+#websiteby {
+  color: grey;
+  font-style: italic;
+  font-family: Times;
 }

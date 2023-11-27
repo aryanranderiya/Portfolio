@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // ! Menu Hover Effect
-      const menu_items = document.querySelector(".menu_items");
-      menu_items.addEventListener("mouseover", () => {
-        cursor.style.transform = "scale(10)";
+      // const menu_items = document.querySelector(".navbar_menu");
+      navbar_menu.addEventListener("mouseover", () => {
+        cursor.style.transform = "scale(8)";
         cursor.style.mixBlendMode = "difference";
         cursor.style.boxShadow = "none";
       });
 
-      menu_items.addEventListener("mouseout", () => {
+      navbar_menu.addEventListener("mouseout", () => {
         cursor.style.transform = "none";
         cursor.style.mixBlendMode = "normal";
         cursor.style.boxShadow = "0px 0px 30px white";

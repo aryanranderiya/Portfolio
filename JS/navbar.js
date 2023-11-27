@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 console.log("Navigation bar Script loaded");
 
+// ! highlight current active page
 function setActiveLink() {
   const pathName = window.location.pathname;
   const links = document.querySelectorAll(".menu_item");

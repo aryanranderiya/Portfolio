@@ -110,30 +110,52 @@ a {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  /* margin-top: 3%; */
 }
 
-.item.active {
+.item {
+  width: 100%;
+  color: #474747;
+  display: flex;
+  transition: color 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_item {
+  color: #474747;
+  font-size: 8em;
+  font-weight: bolder !important;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin: -0.1em 0 -0.1em 0;
+}
+
+.item.active,
+.item.item.active .menu_item {
   color: white;
   font-family: Timesi;
+  transform: skewX(-10deg);
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.item.active:hover {
+.item.active:hover,
+.item.item.active:hover .menu_item {
   color: #00bbff;
   font-family: Timesi;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.menu_item:hover .item:hover {
+.item:hover,
+.item:hover .menu_item {
   color: white;
-  transition: color 0.3s ease-in-out;
   font-family: Timesi;
-  font-style: italic;
+  transform: skewX(-10deg);
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* .menu_item_icon:hover {
-  color: white;
-  font-style: italic;
-} */
+.menu_item_icon {
+  margin-right: 0.5em;
+}
 
 .horizontal_line {
   width: 100%;
@@ -146,35 +168,4 @@ a {
   color: grey;
   font-style: italic;
   font-family: Times;
-}
-
-.item {
-  width: 100%;
-}
-
-.item,
-.item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #2c3031;
-}
-/* 
-.item:hover,
-.item a:hover {
-  color: white;
-  font-style: italic;
-  font-family: Times;
-} */
-
-.menu_item_icon {
-  margin-right: 0.5em;
-}
-
-.menu_item {
-  font-size: 8em;
-  font-weight: bolder !important;
-  text-transform: uppercase;
-  background-color: transparent;
-  margin: -0.1em 0 -0.1em 0;
 }

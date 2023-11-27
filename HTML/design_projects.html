@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Projects</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel='stylesheet' type='text/css' href='/CSS/design_projects.css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' href='/CSS/cursor.css'>
+    <link rel='stylesheet' type='text/css' href='/CSS/preloader.css'>
+    <link rel='stylesheet' type='text/css' href='/CSS/navbar.css'>
+
 </head>
 
 <body>
 
+    <canvas id="ontop-gradient"></canvas>
+
+    <canvas id="gradient-canvas"></canvas>
+
+    <!-- Preloader -->
+    <div class="black_cover visible center-content">
+        <div class="preloader">
+            <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="custom-loader"></div>
+        </div>
+    </div>
+
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Navigation Bar -->
     <header id="navbarContainer"></header>
 
     <div class="title">
@@ -18,7 +45,11 @@
         <h5 class="font-weight-bold subheading"><br>by Aryan Randeriya</h1>
     </div>
 
-
+    <script src="/JS/preloader.js"></script>
+    <script src="/JS/navbar.js"></script>
+    <script src="/JS/cursor.js"></script>
+    <script src="/JS/design_projects.js"></script>
+    <script type="module" src="/JS/design_projects_applygradient.js"></script>
 </body>
 
 </html>

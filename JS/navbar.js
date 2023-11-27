@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //! Add the navigation bar
 
   const navbarContainer = document.getElementById("navbarContainer");
-  fetch("navbar.html")
+  fetch("navbar.html") //! Fetch navbar html into the element navbar
     .then((response) => response.text())
     .then((data) => {
       navbarContainer.innerHTML = data;

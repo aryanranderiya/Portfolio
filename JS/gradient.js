@@ -631,7 +631,7 @@ class Gradient {
               ((this.computedCanvasStyle = getComputedStyle(this.el)),
               this.waitForCssVars());
           }));
-          /*
+    /*
         this.scrollObserver = await s.create(.1, !1),
         this.scrollObserver.observe(this.el),
         this.scrollObserver.onSeparate(() => {
@@ -871,3 +871,5 @@ class Gradient {
  */
 
 export { Gradient };
+
+console.log("Gradient JS Script loaded.");

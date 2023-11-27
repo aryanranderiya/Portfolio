@@ -1,13 +1,5 @@
 const subContent = document.querySelector(".subcontent");
 
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY == 0) {
-//     subContent.style.opacity = "0";
-//   } else {
-//     subContent.style.opacity = "1";
-//   }
-// });
-
 // ! Intersection Observer
 function handleIntersection(entries, observer) {
   entries.forEach((entry) => {
@@ -30,6 +22,9 @@ const observer = new IntersectionObserver(handleIntersection, {
 });
 
 observer.observe(contentElement);
+
+// ! intersection obvserver with navigation bar
+
 
 function scrollToContent() {
   const contentElement = document.querySelector(".content1");

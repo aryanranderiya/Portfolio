@@ -1,16 +1,36 @@
-// window.addEventListener("scroll", function () {
+const subContent = document.querySelector(".subcontent");
 
-//   if (window.scrollY > 1000) {
-//     document.getElementById("navbarContainer").style.display = "none";
-//     console.log("debug1");
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY == 0) {
+//     subContent.style.opacity = "0";
 //   } else {
-//     document.getElementById("navbarContainer").style.display = "block";
-//     console.log("debug2");
+//     subContent.style.opacity = "1";
 //   }
 // });
 
+// ! Intersection Observer
+function handleIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in");
+    } else {
+      entry.target.classList.remove("fade-in");
+    }
+  });
+}
+
+//! Use the Intersection Observer
+const contentElement = document.querySelector(".subcontent");
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null, // viewport
+  rootMargin: "0px", // no margin
+  threshold: 0.5, // 0.5 means 50% of the target element must be visible
+});
+
+observer.observe(contentElement);
+
 function scrollToContent() {
-  const contentElement = document.querySelector(".content");
+  const contentElement = document.querySelector(".content1");
 
   contentElement.scrollIntoView({
     top: contentElement.offsetTop,

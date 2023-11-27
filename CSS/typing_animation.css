@@ -26,7 +26,7 @@
   /* border-right: 0.1em solid rgb(255, 255, 255); */
   /* width: 16ch; */
   /* margin: 2em; */
-  margin-top: 3em;
+  /* margin-top: 3em; */
   margin-bottom: 3%;
   white-space: nowrap;
   overflow: hidden;
@@ -45,17 +45,16 @@
 
 .animation_paragraph {
   width: 100%;
-  font: bold 100% Consolas, Monaco, monospace;
+  /* font: bold 100% Consolas, Monaco, monospace; */
   color: white;
-  font-size: 1.3em;
+  font-family: Helvetica;
+  font-size: 1.7em;
   border-right: 0.2em solid rgb(255, 255, 255);
   /* width: 115ch; */
   white-space: nowrap;
   overflow: hidden;
 
-  text-align: right;
-  justify-content: right;
-  align-items: right;
+  text-align: center;
   animation: typing 1s steps(14, end),
     blink-caret 0.5s step-end infinite alternate;
 

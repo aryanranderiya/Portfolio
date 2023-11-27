@@ -43,6 +43,10 @@
 
     <!-- !First Page Cover -->
     <div class="cover">
+        <canvas id="ontop-gradient-main"></canvas>
+
+        <canvas id="gradient-canvas-main"></canvas>
+
         <!--! Cursor -->
         <div class="cursor"></div>
 
@@ -69,40 +73,18 @@
         </button>
     </div>
 
-    <div class="content">
+    <div class="content1">
 
-        <div class="left">
-            <div class="perspective-text">
-                <div class="perspective-line">
-                    <p></p>
-                    <p>Welcome</p>
-                </div>
-                <div class="perspective-line">
-                    <p>Welcome</p>
-                    <p>to</p>
-                </div>
-                <div class="perspective-line">
-                    <p>to</p>
-                    <p>Aryans</p>
-                </div>
-                <div class="perspective-line">
-                    <p>Aryans</p>
-                    <p>Portfolio</p>
-                </div>
-                <div class="perspective-line">
-                    <p>Portfolio</p>
-                    <p></p>
-                </div>
-            </div>
-        </div>
+        <div class="subcontent center-content">
+            <canvas id="ontop-gradient"></canvas>
 
-        <div class="right">
+            <canvas id="gradient-canvas"></canvas>
 
             <!-- !Hello World & Animating text -->
             <div class="main_text ">
                 <div class="typing_animation"><text id="hello">Hello</text> <text id="world">World!</text></div>
-                <div class="animation_paragraph">Welcome to my Website! I am Aryan, and I
-                    am an aspiring 18 year old Software Developer & Graphic Designer!
+                <div class="animation_paragraph">Welcome to my Website!
+                    I'm Aryan, an aspiring 18 year old Software Developer & Graphic Designer!
                     <br><br> Feel free to view my various Projects Below!
                 </div>
             </div>
@@ -133,22 +115,47 @@
 
             <div class="socials">
                 <a href="https://www.linkedin.com/in/aryanranderiya" target="_blank"><i
-                        class="fa-brands fa-linkedin fa-4x" style="color: #0072b1;"></i></a>
+                        class="fa-brands fa-linkedin fa-4x"></i></a> <!-- style="color: #0072b1;"-->
 
-                <a href="https://www.github.com/aryanranderiya" target="_blank"><i class="fa-brands fa-github fa-4x"
-                        style="color: white;"></i></a>
+                <a href="https://www.github.com/aryanranderiya" target="_blank"><i
+                        class="fa-brands fa-github fa-4x"></i></a>
 
-                <a href="https://www.behance.net/aryanranderiya" target="_blank"><i class="fa-brands fa-behance fa-4x"
-                        style="color: #053eff;"></i></a>
+                <a href="https://www.behance.net/aryanranderiya" target="_blank"><i
+                        class="fa-brands fa-behance fa-4x"></i></a> <!-- style="color: #053eff;"-->
 
-                <a href="https://www.twitter.com/aryanranderiya" target="_blank"><i class="fa-brands fa-twitter fa-4x"
-                        style="color: #00acee;"></i></a>
+                <a href="https://www.twitter.com/aryanranderiya" target="_blank"><i
+                        class="fa-brands fa-twitter fa-4x"></i></a> <!-- style="color: #00acee;"-->
 
                 <a href="https://www.instagram.com/aryanranderiya" target="_blank"><i
                         class="fa-brands fa-instagram fa-4x instagram-icon"></i></a>
             </div>
 
         </div>
+
+        <!-- <div class="right">
+            <div class="perspective-text">
+                <div class="perspective-line">
+                    <p></p>
+                    <p>Welcome</p>
+                </div>
+                <div class="perspective-line">
+                    <p>Welcome</p>
+                    <p>to</p>
+                </div>
+                <div class="perspective-line">
+                    <p>to</p>
+                    <p>Aryans</p>
+                </div>
+                <div class="perspective-line">
+                    <p>Aryans</p>
+                    <p>Portfolio</p>
+                </div>
+                <div class="perspective-line">
+                    <p>Portfolio</p>
+                    <p></p>
+                </div>
+            </div>
+        </div> -->
 
         <div class="marquee">
             <div class="marquee__group" aria-hidden="true">
@@ -184,8 +191,10 @@
 
     <!-- Scripts -->
     <script src="/JS/cursor.js"></script>
-    <script src="/JS/index.js"></script>
     <script src="/JS/preloader.js"></script>
+    <script type="module" src="/JS/index_applygradient.js"></script>
+    <script src="/JS/index.js"></script>
+
 </body>
 
 </html>

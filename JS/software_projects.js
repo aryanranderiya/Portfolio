@@ -83,7 +83,7 @@ function processDataAndHidePreloader(snapshot) {
 
   const blackCover = document.querySelector(".black_cover");
   const terminal_bling = document.querySelector(".terminal_bling");
-
+  // ! Remove the preloader and black card
   setTimeout(function () {
     blackCover.classList.remove("visible");
     document.body.style.overflow = "auto";
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
 });
 
+// ! Display on the scroll
 var cards = document.querySelector(".cards");
 window.addEventListener("scroll", function () {
   if (window.scrollY == 0) {

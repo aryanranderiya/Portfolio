@@ -2,8 +2,8 @@
   font-family: "Helvetica";
 }
 
-a {
-  text-decoration: none !important;
+.material-symbols-rounded.md-60 {
+  font-size: 8em;
 }
 
 .website-title {
@@ -98,7 +98,7 @@ a {
 
 *,
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .menu_items {
@@ -113,32 +113,27 @@ a {
   /* margin-top: 3%; */
 }
 
-.menu_item {
-  width: 100%;
-  font-size: 8em;
-  font-weight: bolder !important;
-  text-transform: uppercase;
-  color: #2c3031;
-  background-color: transparent;
-  margin: -0.1em 0 -0.1em 0;
-}
-
-.menu_item.active {
+.item.active {
   color: white;
   font-family: Timesi;
 }
 
-.menu_item.active:hover {
+.item.active:hover {
   color: #00bbff;
   font-family: Timesi;
 }
 
-.menu_item:hover {
+.menu_item:hover .item:hover {
   color: white;
   transition: color 0.3s ease-in-out;
   font-family: Timesi;
   font-style: italic;
 }
+
+/* .menu_item_icon:hover {
+  color: white;
+  font-style: italic;
+} */
 
 .horizontal_line {
   width: 100%;
@@ -151,4 +146,35 @@ a {
   color: grey;
   font-style: italic;
   font-family: Times;
+}
+
+.item {
+  width: 100%;
+}
+
+.item,
+.item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c3031;
+}
+/* 
+.item:hover,
+.item a:hover {
+  color: white;
+  font-style: italic;
+  font-family: Times;
+} */
+
+.menu_item_icon {
+  margin-right: 0.5em;
+}
+
+.menu_item {
+  font-size: 8em;
+  font-weight: bolder !important;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin: -0.1em 0 -0.1em 0;
 }

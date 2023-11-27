@@ -48,15 +48,19 @@ console.log("Navigation bar Script loaded");
 // ! highlight current active page
 function setActiveLink() {
   const pathName = window.location.pathname;
-  const links = document.querySelectorAll(".menu_item");
+  const items = document.querySelectorAll(".item");
 
-  links.forEach((link) => {
-    const href = link.parentElement.getAttribute("href");
+  items.forEach((item) => {
+    const href = item.querySelector("a").getAttribute("href");
+    const menu_item = item.querySelector(".menu_item");
+
     if (pathName === href) {
-      link.classList.add("active");
+      item.classList.add("active");
+      // menu_item.classList.add("active");
       console.log("Active class added in menu");
     } else {
-      link.classList.remove("active");
+      item.classList.remove("active");
+      // menu_item.classList.remove("active");
     }
   });
 }

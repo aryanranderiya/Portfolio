@@ -41,7 +41,7 @@ body {
 
 @font-face {
   font-family: Akira;
-  src: url("/fonts/Akira.ttf") format("truetype");
+  src: url("font_Akira.ttf") format("truetype");
 }
 /* !marquee */
 
@@ -269,27 +269,27 @@ body {
 
 @font-face {
   font-family: IllusionSerif;
-  src: url("/fonts/IllusionSerif-Regular.ttf") format("truetype");
+  src: url("font_IllusionSerif-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: Times;
-  src: url("/fonts/times.ttf") format("truetype");
+  src: url("font_times.ttf") format("truetype");
 }
 
 @font-face {
   font-family: TimesBD;
-  src: url("/fonts/timesbd.ttf") format("truetype");
+  src: url("font_timesbd.ttf") format("truetype");
 }
 
 @font-face {
   font-family: TimesI;
-  src: url("/fonts/timesi.ttf") format("truetype");
+  src: url("font_timesi.ttf") format("truetype");
 }
 
 @font-face {
   font-family: TimesBI;
-  src: url("/fonts/timesbi.ttf") format("truetype");
+  src: url("font_timesbi.ttf") format("truetype");
 }
 
 /* ! Perspective text */

@@ -11,13 +11,13 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease-out;
   z-index: -1;
-  backdrop-filter: blur(15.2px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(15.2px);
 }
 
 .black_cover.visible {
   opacity: 1;
-  z-index: 1000;
+  z-index: 100000;
 }
 
 .preloader {

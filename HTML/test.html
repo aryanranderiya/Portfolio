@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursors</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            cursor: none;
+        }
+
+        .custom-cursor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .site-wide {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        .site-wide .pointer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: black;
+            transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+        }
+
+        .site-wide.active .pointer {
+            width: 20px;
+            height: 20px;
+        }
+
+        .boxes {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .boxes .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .boxes .box:nth-child(1) {
+            background-color: palevioletred;
+        }
+
+        .boxes .box:nth-child(2) {
+            background-color: palegreen;
+        }
+
+        .boxes .box:nth-child(3) {
+            background-color: paleturquoise;
+        }
+
+        .box-bound {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-position: top left;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+        }
+
+        .box-bound.active {
+            width: 150px;
+            height: 75px;
+        }
+    </style> -->
+    <style>
+        body {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23000000" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+            height: 100vh;
+        }
+
+        a {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" stroke="%23000000" fill="%23000000" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom-cursor site-wide">
+        <div class="pointer"></div>
+    </div>
+
+
+    <!-- <script>
+
+        // Site wide cursor
+        const site_wide_cursor = document.querySelector('.custom-cursor.site-wide');
+
+        document.addEventListener('mouseenter', () => {
+            site_wide_cursor.style.display = 'block';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            site_wide_cursor.style.display = 'none';
+        });
+
+        document.addEventListener('mousemove', TrackCursor);
+
+        document.addEventListener('mousedown', () => site_wide_cursor.classList.add('active'));
+        document.addEventListener('mouseup', () => site_wide_cursor.classList.remove('active'));
+
+        function TrackCursor(evt) {
+            const w = site_wide_cursor.clientWidth;
+            const h = site_wide_cursor.clientHeight;
+
+            site_wide_cursor.style.transform =
+                `translate(${evt.clientX - w / 2}px, ${evt.clientY - h / 2}px)`;
+        }
+
+        // Box Bound Cursors
+        const boxes = document.querySelectorAll('.boxes .box');
+
+        for (let i = 0; i < boxes.length; i++) {
+            const box = boxes[i];
+            const cursor = box.querySelector('.custom-cursor');
+
+            box.addEventListener('mouseenter', () => {
+                site_wide_cursor.style.display = 'none';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                site_wide_cursor.style.display = 'block';
+            });
+
+            document.addEventListener('mousemove', TrackBoxCursor.bind(box));
+
+            document.addEventListener('mousedown', () => cursor.classList.add('active'));
+            document.addEventListener('mouseup', () => cursor.classList.remove('active'));
+        }
+
+        function TrackBoxCursor(evt) {
+            const box = this;
+            const cursor = box.querySelector('.custom-cursor');
+
+            const boxRect = box.getBoundingClientRect();
+
+            const x = evt.clientX - boxRect.left;
+            const y = evt.clientY - boxRect.top;
+
+            cursor.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    </script> -->
+</body>
+
+</html>

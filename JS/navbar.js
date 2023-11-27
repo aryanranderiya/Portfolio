@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       navbarContainer.innerHTML = data;
 
+      setActiveLink();
+
       const navbar_menu = document.querySelector(".navbar_menu");
       const checkbox = document.getElementById("hamburgerCheckbox");
       const body = document.querySelector("body");
@@ -42,3 +44,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 console.log("Navigation bar Script loaded");
+
+function setActiveLink() {
+  const pathName = window.location.pathname;
+  const links = document.querySelectorAll(".menu_item");
+
+  links.forEach((link) => {
+    const href = link.parentElement.getAttribute("href");
+    if (pathName === href) {
+      link.classList.add("active");
+      console.log("Active class added in menu");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+}

@@ -10,23 +10,12 @@
   }
 }
 
-#hello {
-  font: bold 110% Helvetica;
-}
 
-#world {
-  font: bold 120% Timesbi;
-}
 
 .typing_animation {
   color: white;
   width: 100%;
-  /* font: bold 300% Consolas, Monaco, monospace; */
   font-size: 7em;
-  /* border-right: 0.1em solid rgb(255, 255, 255); */
-  /* width: 16ch; */
-  /* margin: 2em; */
-  /* margin-top: 3em; */
   margin-bottom: 3%;
   white-space: nowrap;
   overflow: hidden;

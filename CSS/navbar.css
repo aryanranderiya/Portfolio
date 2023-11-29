@@ -6,6 +6,7 @@
   outline-color: white;
   outline-style: solid;
   outline-width: 1px;
+  /* ! EDIT */
   margin: 10px 22px;
   border-radius: 5em;
 }
@@ -15,7 +16,7 @@
 }
 
 .website-title {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 20px;
   position: absolute;
   align-items: center;

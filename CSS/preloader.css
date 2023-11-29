@@ -1,13 +1,14 @@
 body {
   overflow: hidden;
 }
-
 .black_cover {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   opacity: 0;
   transition: opacity 0.3s ease-out;
   z-index: -1;
@@ -120,7 +121,7 @@ body {
 
 /* Text*/
 
-#loading_text{
+#loading_text {
   font-size: 1.3em;
   font-family: Helvetica;
   font-weight: bold;

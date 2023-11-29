@@ -23,7 +23,7 @@
   height: 100%;
   padding-left: 10px;
   color: white;
-  animation: spin_words 3s ease-out; /* Use ease-out timing function */
+  animation: spin_words 3s ease-out;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -136,5 +136,40 @@
   }
   100% {
     transform: translateY(-3000%);
+  }
+}
+
+.progress-loader-helloworld {
+  /* top: 50%; */
+  /* left: 50%; */
+  /* position: relative; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.progress-loader-helloworld {
+  margin-top: 5em;
+  width: 20%;
+  background: rgba(236, 236, 238, 0.253);
+  height: 3px;
+  border-radius: 7px;
+}
+
+.progress-helloworld {
+  content: "";
+  width: 1px;
+  height: 3px;
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+  transition: 0.5s;
+  animation: progress_bar_loading 3s ease-out forwards;
+}
+
+@keyframes progress_bar_loading {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
   }
 }

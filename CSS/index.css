@@ -81,13 +81,13 @@ body {
   display: inline;
   margin: 1em 0 0 0.5em;
   text-align: center;
-  transition: transform 0.1s ease-in-out;
+  /* transition: transform 0.1s ease-in-out; */
 }
 
 .socials i:hover {
   animation: bounce 0.5s ease-out;
-  transform: scale(2);
-  transition: transform 0.1s ease-in-out;
+  /* transform: scale(2); */
+  /* transition: transform 0.1s ease-in-out; */
 }
 
 .buttons {

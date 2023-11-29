@@ -1,6 +1,13 @@
+const blackCover = document.querySelector(".black_cover");
+const terminal_bling = document.querySelector(".terminal_bling");
+var cards = document.querySelector(".cards");
+
+//! Scroll to the top on reload
 window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
+
+// ! FIREBASE INIT --------------------------------------------------------------------------------------
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
 
@@ -24,6 +31,8 @@ initializeApp(firebaseConfig);
 const database = getDatabase();
 const projectsRef = ref(database, "Projects/");
 
+// ! FIREBASE INIT --------------------------------------------------------------------------------------
+
 function processDataAndHidePreloader(snapshot) {
   snapshot.forEach((childSnapshot) => {
     const projectDetails = childSnapshot.val();
@@ -46,7 +55,7 @@ function processDataAndHidePreloader(snapshot) {
     console.log("type:" + projectType);
     const card = document.createElement("div");
     card.innerHTML = `
-      <div class="card cardhidden">
+      <div class="card">
         <div class="card-content">
             <div class="card-image"> </div>
             <div class="card-info-wrapper">
@@ -81,8 +90,6 @@ function processDataAndHidePreloader(snapshot) {
     document.querySelector(".cards").appendChild(card);
   });
 
-  const blackCover = document.querySelector(".black_cover");
-  const terminal_bling = document.querySelector(".terminal_bling");
   // ! Remove the preloader and black card
   setTimeout(function () {
     blackCover.classList.remove("visible");
@@ -97,16 +104,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ! Display on the scroll
-var cards = document.querySelector(".cards");
-window.addEventListener("scroll", function () {
-  if (window.scrollY == 0) {
-    cards.classList.add("cardhidden");
-    cards.classList.remove("cardhicardvisibledden");
-  } else {
-    cards.classList.remove("cardhidden");
-    cards.classList.add("cardvisible");
-  }
-});
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY == 0) {
+//     cards.classList.add("cardhidden");
+//     cards.classList.remove("cardhicardvisibledden");
+//   } else {
+//     cards.classList.remove("cardhidden");
+//     cards.classList.add("cardvisible");
+//   }
+// });
 
 //! Software Projects Title
 
@@ -127,17 +133,32 @@ software_projects_title.addEventListener("mouseout", () => {
 document.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("card")) {
     cursor.style.transform = "scale(1)";
-    // cursor.style.mixBlendMode = "difference";
     cursor.style.boxShadow =
       "0px 0px 20px white, 0px 0px 35px white, 0px 0px 50px white, 0px 0px 60px white,  0px 0px 70px white,0px 0px 80px white,0px 0px 95px white, 0px 0px 110px white";
-    //       "0px 0px 20px white, 0px 0px 35px white,0px 0px 50px white, 0px 0px 65px white,  0px 0px 80px white,0px 0px 95px white, 0px 0px 110px white,";
   }
 });
 
 document.addEventListener("mouseout", function (event) {
   if (event.target.classList.contains("card")) {
     cursor.style.transform = "none";
-    // cursor.style.mixBlendMode = "normal";
     cursor.style.boxShadow = "0px 0px 30px white";
   }
 });
+
+//! First Intersection Observer
+function handleIntersection1(entries, observer) {
+  //! Fade in the content box
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      cards.style.opacity = "1";
+    } else {
+      cards.style.opacity = "0";
+    }
+  });
+}
+const observer1 = new IntersectionObserver(handleIntersection1, {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+});
+observer1.observe(cards);

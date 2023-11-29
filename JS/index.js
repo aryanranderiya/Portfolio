@@ -1,8 +1,9 @@
 const subContent = document.querySelector(".subcontent");
 const navbar = document.querySelector(".navbar");
+
 //! First Intersection Observer
-//! Fade in the content box
 function handleIntersection1(entries, observer) {
+  //! Fade in the content box
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("fade-in");
@@ -23,8 +24,8 @@ const observer1 = new IntersectionObserver(handleIntersection1, {
 observer1.observe(subContent);
 
 //! Second Intersection Observer
-//! Fade in the navbar
 function handleIntersection2(entries, observer) {
+  //! Fade in the navbar
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       document.querySelector(".navbar").style.opacity = "1";
@@ -73,6 +74,7 @@ const titles = document.querySelector(".title_heading_1");
 const scroll_btn = document.querySelector(".scroll_btn");
 const main_text = document.querySelector(".typing_animation");
 const marquee = document.querySelector(".marquee");
+const hello_world = document.querySelector(".words");
 
 // ! Titles
 
@@ -137,6 +139,20 @@ marquee.addEventListener("mouseover", () => {
 });
 
 marquee.addEventListener("mouseout", () => {
+  cursor.style.transform = "none";
+  cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 30px white";
+});
+
+//! Hello World Text
+
+hello_world.addEventListener("mouseover", () => {
+  cursor.style.transform = "scale(15)";
+  cursor.style.mixBlendMode = "difference";
+  cursor.style.boxShadow = "none";
+});
+
+hello_world.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 30px white";

@@ -32,20 +32,6 @@
   position: relative;
 }
 
-.cards.cardvisible {
-  visibility: visible;
-  opacity: 1;
-}
-
-.cards.cardhidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
-#cards:hover > .card::after {
-  opacity: 1;
-}
-
 .card-title {
   color: white;
   font-size: 1.9em;

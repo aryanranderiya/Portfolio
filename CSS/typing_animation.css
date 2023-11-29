@@ -10,8 +10,6 @@
   }
 }
 
-
-
 .typing_animation {
   color: white;
   width: 100%;
@@ -20,9 +18,9 @@
   white-space: nowrap;
   overflow: hidden;
 
-  text-align: right;
+  /* text-align: right;
   justify-content: right;
-  align-items: right;
+  align-items: right; */
   text-transform: uppercase;
 
   /* animation: typing 1s steps(14, end),
@@ -37,7 +35,7 @@
   /* font: bold 100% Consolas, Monaco, monospace; */
   color: white;
   font-family: Helvetica;
-  font-size: 1.3em;
+  font-size: 1.5em;
   border-right: 0.2em solid rgb(255, 255, 255);
   /* width: 115ch; */
   white-space: nowrap;

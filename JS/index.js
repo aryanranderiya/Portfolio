@@ -48,6 +48,7 @@ function scrollToCoverWithDelay() {
     const coverElement = document.querySelector(".cover");
     coverElement.scrollIntoView({ behavior: "smooth" });
     document.body.style.overflow = "auto";
+    document.getElementById("navbarContainer").style.opacity = "1";
   }, 800);
 
   setTimeout(function () {

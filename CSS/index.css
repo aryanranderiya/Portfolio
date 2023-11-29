@@ -32,11 +32,15 @@ body {
   transform: scale(1.3);
 }
 
+#navbarContainer {
+  opacity: 0;
+}
+
 .welcoming {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1000000;
+  z-index: 10000;
 
   display: grid;
 

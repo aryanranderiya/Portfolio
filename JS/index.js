@@ -1,6 +1,7 @@
 const subContent = document.querySelector(".subcontent");
-
+const navbar = document.querySelector(".navbar");
 //! First Intersection Observer
+//! Fade in the content box
 function handleIntersection1(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -14,34 +15,31 @@ function handleIntersection1(entries, observer) {
     }
   });
 }
-
-//! Use the First Intersection Observer
 const observer1 = new IntersectionObserver(handleIntersection1, {
   root: null,
   rootMargin: "0px",
   threshold: 0.3,
 });
-
 observer1.observe(subContent);
 
 //! Second Intersection Observer
+//! Fade in the navbar
 function handleIntersection2(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       document.querySelector(".navbar").style.opacity = "1";
+      document.querySelector(".navbar").style.transform = "scale(1)";
     } else {
       document.querySelector(".navbar").style.opacity = "0";
+      document.querySelector(".navbar").style.transform = "scale(1.3)";
     }
   });
 }
-
-//! Use the Second Intersection Observer
 const observer2 = new IntersectionObserver(handleIntersection2, {
   root: null,
   rootMargin: "0px",
   threshold: 1,
 });
-
 observer2.observe(subContent);
 
 // ! Scroll after animation finishes:
@@ -60,8 +58,7 @@ function scrollToCoverWithDelay() {
 const wrapperElement = document.querySelector(".words_rotating_span");
 wrapperElement.addEventListener("animationend", scrollToCoverWithDelay);
 
-// ! Scroll on button click:
-
+// ! Scroll on button click
 function scrollToContent() {
   const contentElement = document.querySelector(".content1");
 

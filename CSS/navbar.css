@@ -2,11 +2,11 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   outline-color: white;
   outline-style: solid;
   outline-width: 1px;
-  margin: 10px;
+  margin: 10px 22px;
   border-radius: 5em;
 }
 
@@ -47,7 +47,9 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.39);
+  /* background-color: rgba(0, 0, 0, 0.39);
+   */
+  background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   z-index: 1000;
@@ -125,7 +127,9 @@ a {
 
 .item {
   width: 100%;
-  color: #474747;
+  /* color: #474747; */
+  color: black;
+
   display: flex;
   transition: color 0.3s ease-in-out;
   justify-content: center;
@@ -134,7 +138,8 @@ a {
 }
 
 .menu_item {
-  color: #474747;
+  /* color: #474747; */
+  color: black;
   font-size: 8em;
   font-weight: bolder !important;
   text-transform: uppercase;

@@ -1,30 +1,66 @@
 const subContent = document.querySelector(".subcontent");
 
-// ! Intersection Observer
-function handleIntersection(entries, observer) {
+//! First Intersection Observer
+function handleIntersection1(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("fade-in");
       entry.target.classList.add("zoom-out");
+      // document.querySelector(".navbar").style.opacity = "1";
     } else {
       entry.target.classList.remove("fade-in");
       entry.target.classList.remove("zoom-out");
+      // document.querySelector(".navbar").style.opacity = "0";
     }
   });
 }
 
-//! Use the Intersection Observer
-const contentElement = document.querySelector(".subcontent");
-const observer = new IntersectionObserver(handleIntersection, {
-  root: null, // viewport
-  rootMargin: "0px", // no margin
-  threshold: 0.5, // 0.5 means 50% of the target element must be visible
+//! Use the First Intersection Observer
+const observer1 = new IntersectionObserver(handleIntersection1, {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
 });
 
-observer.observe(contentElement);
+observer1.observe(subContent);
 
-// ! intersection obvserver with navigation bar
+//! Second Intersection Observer
+function handleIntersection2(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document.querySelector(".navbar").style.opacity = "1";
+    } else {
+      document.querySelector(".navbar").style.opacity = "0";
+    }
+  });
+}
 
+//! Use the Second Intersection Observer
+const observer2 = new IntersectionObserver(handleIntersection2, {
+  root: null,
+  rootMargin: "0px",
+  threshold: 1,
+});
+
+observer2.observe(subContent);
+
+// ! Scroll after animation finishes:
+function scrollToCoverWithDelay() {
+  setTimeout(function () {
+    const coverElement = document.querySelector(".cover");
+    coverElement.scrollIntoView({ behavior: "smooth" });
+    document.body.style.overflow = "auto";
+  }, 800);
+
+  setTimeout(function () {
+    document.querySelector(".welcoming").remove();
+  }, 1500);
+}
+
+const wrapperElement = document.querySelector(".words_rotating_span");
+wrapperElement.addEventListener("animationend", scrollToCoverWithDelay);
+
+// ! Scroll on button click:
 
 function scrollToContent() {
   const contentElement = document.querySelector(".content1");

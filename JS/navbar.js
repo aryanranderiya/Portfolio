@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // ! Menu Hover Effect
+      // ! Cursor Menu Hover Effect
       // const menu_items = document.querySelector(".navbar_menu");
       navbar_menu.addEventListener("mouseover", () => {
         cursor.style.transform = "scale(8)";
@@ -53,7 +53,8 @@ function setActiveLink() {
   items.forEach((item) => {
     const href = item.querySelector("a").getAttribute("href");
     const menu_item = item.querySelector(".menu_item");
-
+    console.log("pathName:", pathName);
+    console.log("href:", href);
     if (pathName === href) {
       item.classList.add("active");
       console.log("Active class added in menu");

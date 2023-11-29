@@ -103,17 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
 });
 
-// ! Display on the scroll
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY == 0) {
-//     cards.classList.add("cardhidden");
-//     cards.classList.remove("cardhicardvisibledden");
-//   } else {
-//     cards.classList.remove("cardhidden");
-//     cards.classList.add("cardvisible");
-//   }
-// });
-
 //! Software Projects Title
 
 software_projects_title.addEventListener("mouseover", () => {
@@ -144,6 +133,8 @@ document.addEventListener("mouseout", function (event) {
     cursor.style.boxShadow = "0px 0px 30px white";
   }
 });
+
+// ! Display on the scroll
 
 //! First Intersection Observer
 function handleIntersection1(entries, observer) {

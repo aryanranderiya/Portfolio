@@ -1,26 +1,20 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
 body {
   height: 100%;
-  font-family: "Helvetica Neue", sans-serif;
   background: transparent;
-  /* background-color: hsla(195, 100%, 50%, 1) !important;
-  background-image: radial-gradient(
-      at 88% 5%,
-      hsla(204, 100%, 50%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 61% 94%, hsla(194, 100%, 87%, 1) 0px, transparent 50%),
-    radial-gradient(at 22% 38%, hsla(195, 100%, 50%, 1) 0px, transparent 50%),
-    radial-gradient(at 93% 87%, hsla(17, 100%, 50%, 1) 0px, transparent 50%),
-    radial-gradient(at 68% 40%, hsla(233, 100%, 50%, 1) 0px, transparent 50%),
-    radial-gradient(at 66% 92%, hsla(157, 100%, 64%, 1) 0px, transparent 50%),
-    radial-gradient(at 46% 2%, hsla(28, 100%, 50%, 1) 0px, transparent 50%); */
+}
+
+.content1 {
+  margin: 5% 5%;
+}
+
+@font-face {
+  font-family: "DirtyLine";
+  src: url("/fonts/Dirtyline 36daysoftype 2022.woff") format("woff"),
+    url("/fonts/Dirtyline 36daysoftype 2022.woff2") format("woff2"),
+    url("/fonts/Dirtyline 36daysoftype 2022.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 .title-heading {
@@ -28,6 +22,8 @@ body {
   font-size: 13em;
   font-weight: bolder;
   margin-left: 5%;
+  font-family: DirtyLine;
+  letter-spacing: 10px;
 }
 
 .subheading {
@@ -40,7 +36,6 @@ body {
 }
 
 #ontop-gradient {
-  margin-top: 2%;
   position: fixed;
   top: 0;
   left: 0;
@@ -56,7 +51,7 @@ body {
 }
 
 #gradient-canvas {
-  margin-top: 2%;
+  /* margin-top: 2%; */
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -72,4 +67,60 @@ body {
   --gradient-color-3: #000000;
   --gradient-color-4: #00bbff;
   background-color: black;
+}
+
+.heading_title_text,
+.icon {
+  color: white;
+  font-family: Helvetica;
+  font-size: 9em !important;
+  font-weight: bold;
+}
+
+.heading_title {
+  opacity: 0;
+  display: inline-flex;
+  margin-bottom: 3%;
+  /* justify-content: center; */
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.icon {
+  font-size: 8em !important;
+  margin-right: 3%;
+}
+
+.images {
+  margin-top: 3em;
+}
+
+hr {
+  color: white;
+}
+.img-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow: hidden;
+  pointer-events: none;
+  margin-top: 1em;
+}
+
+.img-carousel img {
+  /* width: auto; */
+  min-height: 500px;
+  height: 200px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+img {
+  pointer-events: none;
+}
+
+* {
+  user-select: none;
 }

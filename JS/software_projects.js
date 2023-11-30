@@ -1,5 +1,7 @@
 const blackCover = document.querySelector(".black_cover");
 const terminal_bling = document.querySelector(".terminal_bling");
+const cursortext = document.getElementById("cursortext");
+
 var cards = document.querySelector(".cards");
 
 //! Scroll to the top on reload
@@ -134,6 +136,26 @@ document.addEventListener("mouseout", function (event) {
   }
 });
 
+//! Logos Cursor Title
+const logos = document.querySelector(".logos");
+
+logos.addEventListener("mouseover", () => {
+  cursor.style.transform = "scale(8)";
+  cursor.style.boxShadow = "none";
+  cursor.style.opacity = "90%";
+
+  cursortext.style.opacity = "1";
+  cursortext.style.transform = "scale(1)";
+});
+
+logos.addEventListener("mouseout", () => {
+  cursor.style.transform = "none";
+  cursor.style.mixBlendMode = "normal";
+  cursor.style.boxShadow = "0px 0px 30px white";
+  cursortext.style.opacity = "0";
+  cursortext.style.transform = "scale(1)";
+});
+
 // ! Display on the scroll
 
 //! First Intersection Observer
@@ -154,7 +176,7 @@ const observer1 = new IntersectionObserver(handleIntersection1, {
 });
 observer1.observe(cards);
 
-// ! change marquee direction
+// ! change marquee direction on scroll
 
 gsap.registerPlugin(ScrollTrigger);
 

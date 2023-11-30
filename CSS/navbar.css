@@ -188,3 +188,41 @@ a {
   font-style: italic;
   font-family: Times;
 }
+
+#cursortext {
+  color: black;
+  font-size: 3px !important;
+  opacity: 0;
+  z-index: 2001;
+  position: fixed;
+  /* top: 10; */
+  /* transform: translate(20, 30); */
+  /* margin-top: 7px; */
+  /* margin-left: 6px; */
+  margin-top: 46%;
+  margin-left: 12%;
+  font-weight: bold;
+}
+
+#cursoricon1 {
+  color: black;
+  font-size: 0.7em !important;
+  opacity: 0;
+  z-index: 2001;
+  position: fixed;
+  margin-top: 31%;
+  margin-left: 28%;
+  font-weight: bold;
+}
+
+#cursoricon3 {
+  color: black;
+  font-size: 0.7em !important;
+  opacity: 0;
+  z-index: 2001;
+  position: fixed;
+  margin-top: 31%;
+  margin-left: -24%;
+  font-weight: bold;
+  mix-blend-mode: normal !important;
+}

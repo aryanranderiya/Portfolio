@@ -30,13 +30,6 @@
 // ! New Cursor
 
 const cursor = document.querySelector(".cursor");
-
-const btn1 = document.getElementById("btn1");
-const btn2 = document.getElementById("btn2");
-const software_projects_title = document.getElementById(
-  "software_projects_title"
-);
-
 document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";

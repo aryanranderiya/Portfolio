@@ -1,3 +1,5 @@
+const cursoricon1 = document.getElementById("cursoricon1");
+
 //! Add Navigation bar
 
 const navbarContainer = document.getElementById("navbarContainer");
@@ -33,12 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.style.transform = "scale(8)";
     cursor.style.mixBlendMode = "difference";
     cursor.style.boxShadow = "none";
+    cursoricon1.style.opacity = "1";
+    cursoricon1.style.transform = "scale(1)";
   });
 
   navbar_menu.addEventListener("mouseout", () => {
     cursor.style.transform = "none";
     cursor.style.mixBlendMode = "normal";
     cursor.style.boxShadow = "0px 0px 30px white";
+    cursoricon1.style.opacity = "0";
+    cursoricon1.style.transform = "scale(1)";
   });
 });
 

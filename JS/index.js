@@ -70,7 +70,7 @@ function scrollToContent() {
   });
 }
 
-const cover = document.querySelector(".cover");
+const cover = document.querySelector(".titles");
 const titles = document.querySelector(".title_heading_1");
 const scroll_btn = document.querySelector(".scroll_btn");
 const main_text = document.querySelector(".typing_animation");
@@ -152,18 +152,18 @@ btn2.addEventListener("mouseout", () => {
 
 //! Homepage Text
 
-main_text.addEventListener("mouseover", () => {
-  cursoricon2.style.opacity = "0";
-  cursor.style.transform = "scale(8)";
-  cursor.style.mixBlendMode = "difference";
-  cursor.style.boxShadow = "none";
-});
+// main_text.addEventListener("mouseover", () => {
+//   cursoricon2.style.opacity = "0";
+//   cursor.style.transform = "scale(8)";
+//   cursor.style.mixBlendMode = "difference";
+//   cursor.style.boxShadow = "none";
+// });
 
-main_text.addEventListener("mouseout", () => {
-  cursor.style.transform = "none";
-  cursor.style.mixBlendMode = "normal";
-  cursor.style.boxShadow = "0px 0px 30px white";
-});
+// main_text.addEventListener("mouseout", () => {
+//   cursor.style.transform = "none";
+//   cursor.style.mixBlendMode = "normal";
+//   cursor.style.boxShadow = "0px 0px 30px white";
+// });
 
 //  ! Marquee
 

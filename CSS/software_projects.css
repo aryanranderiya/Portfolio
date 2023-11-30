@@ -17,6 +17,7 @@ body {
   margin-left: 5%;
   font-family: VCR;
   margin-bottom: 3%;
+  margin-top: -5% !important;
 }
 
 @font-face {
@@ -27,4 +28,75 @@ body {
 .fa-brands,
 .material-symbols-outlined {
   margin-left: 15px;
+}
+
+/* .logos,
+.logos-slide {
+  display: flex;
+  gap: 5em;
+  margin: 3% 5%;
+}
+*/
+
+.logos_tools {
+  /* background: white; */
+  height: 100px;
+  /* filter: grayscale(); */
+}
+
+/*!Logos animation */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide_reverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  margin: 5% 6%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+
+.logos-slide {
+  display: inline-block;
+  /* animation: 20s slide infinite normal; */
+}
+
+.logos-slide img {
+  height: 100px;
+  margin: 0 40px;
 }

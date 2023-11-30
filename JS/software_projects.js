@@ -153,3 +153,35 @@ const observer1 = new IntersectionObserver(handleIntersection1, {
   threshold: 0.3,
 });
 observer1.observe(cards);
+
+// ! change marquee direction
+
+gsap.registerPlugin(ScrollTrigger);
+
+let currentScroll = 0;
+let isScrollingDown = true;
+
+let tween = gsap
+  .to(".logos-slide", {
+    xPercent: -100,
+    repeat: -1,
+    duration: 10,
+    ease: "linear",
+  })
+  .totalProgress(0.5);
+
+gsap.set(".logos-slide", { xPercent: -50 });
+
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > currentScroll) {
+    isScrollingDown = false;
+  } else {
+    isScrollingDown = true;
+  }
+
+  gsap.to(tween, {
+    timeScale: isScrollingDown ? 1 : -1,
+  });
+
+  currentScroll = window.pageYOffset;
+});

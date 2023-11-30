@@ -83,13 +83,13 @@ const cursoricon3 = document.getElementById("cursoricon3");
 cover.addEventListener("mouseover", () => {
   cursor.style.transform = "scale(8)";
   cursor.style.boxShadow = "none";
-  cursoricon2.style.opacity = "1";
+  cursoricon2.classList.add("active");
 });
 
 cover.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.boxShadow = "0px 0px 30px white";
-  cursoricon2.style.opacity = "0";
+  cursoricon2.classList.remove("active");
 });
 
 titles.addEventListener("mouseover", () => {
@@ -106,16 +106,16 @@ scroll_btn.addEventListener("mouseover", (event) => {
   event.stopPropagation();
   cursor.style.transform = "none";
   cursor.style.boxShadow = "0px 0px 30px white";
-  cursoricon2.style.opacity = "0";
   cursor.style.mixBlendMode = "normal";
+  cursoricon2.classList.remove("active");
 });
 
 scroll_btn.addEventListener("mouseout", (event) => {
   event.stopPropagation();
   cursor.style.transform = "scale(8)";
   cursor.style.boxShadow = "none";
-  cursoricon2.style.opacity = "1";
   cursor.style.mixBlendMode = "normal";
+  cursoricon2.classList.add("active");
 });
 
 //! Project Buttons
@@ -124,28 +124,30 @@ btn1.addEventListener("mouseover", () => {
   cursor.style.transform = "scale(2)";
   cursor.style.mixBlendMode = "difference";
   cursor.style.boxShadow = "none";
-  cursoricon3.style.opacity = "1";
+  cursoricon2.classList.remove("active");
+  cursoricon3.classList.add("active");
 });
 
 btn1.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 30px white";
-  cursoricon3.style.opacity = "0";
+  cursoricon3.classList.remove("active");
 });
 
 btn2.addEventListener("mouseover", () => {
   cursor.style.transform = "scale(2)";
   cursor.style.mixBlendMode = "difference";
   cursor.style.boxShadow = "none";
-  cursoricon3.style.opacity = "1";
+  cursoricon2.classList.remove("active");
+  cursoricon3.classList.add("active");
 });
 
 btn2.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 30px white";
-  cursoricon3.style.opacity = "0";
+  cursoricon3.classList.remove("active");
 });
 
 //! Homepage Text
@@ -166,7 +168,6 @@ main_text.addEventListener("mouseout", () => {
 //  ! Marquee
 
 marquee.addEventListener("mouseover", () => {
-  cursoricon2.style.opacity = "0";
   cursor.style.transform = "scale(6)";
   cursor.style.mixBlendMode = "difference";
   cursor.style.boxShadow = "0px 0px 30px white";

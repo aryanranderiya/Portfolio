@@ -1,5 +1,3 @@
-const cursoricon1 = document.getElementById("cursoricon1");
-
 //! Add Navigation bar
 
 const navbarContainer = document.getElementById("navbarContainer");
@@ -12,6 +10,7 @@ fetch("navbar.html") //! Fetch navbar html into the element navbar
   });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const cursoricon1 = document.getElementById("cursoricon1");
   const navbar_menu = document.querySelector(".navbar_menu");
   const checkbox = document.getElementById("hamburgerCheckbox");
   const body = document.querySelector("body");
@@ -35,16 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.style.transform = "scale(8)";
     cursor.style.mixBlendMode = "difference";
     cursor.style.boxShadow = "none";
-    cursoricon1.style.opacity = "1";
-    cursoricon1.style.transform = "scale(1)";
+    cursoricon1.classList.add("active");
   });
 
   navbar_menu.addEventListener("mouseout", () => {
     cursor.style.transform = "none";
     cursor.style.mixBlendMode = "normal";
     cursor.style.boxShadow = "0px 0px 30px white";
-    cursoricon1.style.opacity = "0";
-    cursoricon1.style.transform = "scale(1)";
+    cursoricon1.classList.remove("active");
   });
 });
 
@@ -55,8 +52,6 @@ function setActiveLink() {
 
   items.forEach((item) => {
     const href = item.querySelector("a").getAttribute("href");
-    // console.log("pathName:", pathName);
-    // console.log("href:", href);
     if (pathName === href) {
       item.classList.add("active");
       console.log("Active class added in menu");

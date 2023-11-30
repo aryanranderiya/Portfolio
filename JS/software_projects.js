@@ -140,20 +140,23 @@ document.addEventListener("mouseout", function (event) {
 const logos = document.querySelector(".logos");
 
 logos.addEventListener("mouseover", () => {
-  cursor.style.transform = "scale(8)";
+  cursor.style.transform = "scale(6)";
   cursor.style.boxShadow = "none";
-  cursor.style.opacity = "90%";
+  // cursor.style.opacity = "10%";
+  cursortext.classList.add("active");
+  cursor.classList.add("blur");
 
-  cursortext.style.opacity = "1";
-  cursortext.style.transform = "scale(1)";
+  // backdrop-filter: blur(100px);
+  // -webkit-backdrop-filter: blur(100px);
 });
 
 logos.addEventListener("mouseout", () => {
   cursor.style.transform = "none";
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 30px white";
-  cursortext.style.opacity = "0";
-  cursortext.style.transform = "scale(1)";
+  // cursor.style.backdropFilter = "none";
+  cursortext.classList.remove("active");
+  cursor.classList.remove("blur");
 });
 
 // ! Display on the scroll

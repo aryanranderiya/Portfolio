@@ -33,13 +33,13 @@ hr{
 header {
   background-color: #000000 !important;
   /* margin: -1% 0;*/
-  padding: 1% 0;
+  /* padding: 0 0; */
 }
 
 #navbarContainer {
   visibility: hidden;
   width: 100%;
-  top: 98%;
+  top: 100%;
   position: absolute;
   z-index: 1001;
   opacity: 0;
@@ -173,7 +173,7 @@ header {
 .subcontent {
   height: 70%;
   width: 100%;
-  margin: 5em;
+  margin: 4em;
   margin-top: 5.5em;
   /* margin-top: -2%; */
   border-radius: 5em;
@@ -510,7 +510,7 @@ p {
   user-select: none;
   gap: 2rem;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   bottom: 0;
   position: absolute;
   white-space: nowrap;

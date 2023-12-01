@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.querySelector("body");
   const menu_items = document.querySelector(".navbar_menu");
 
-  function keyPress(e) {
-    if (e.key === "Escape") {
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" || event.keyCode === 27) {
       navbar_menu.classList.remove("show");
       body.style.overflow = "auto";
       console.log("Escape Key Pressed: Menu Hidden.");
+      checkbox.checked = false;
     }
-  }
-
+  });
   checkbox.addEventListener("click", function () {
     //! Show the Menu when checked
     if (this.checked) {
@@ -61,6 +61,10 @@ function setActiveLink() {
 
   items.forEach((item) => {
     const href = item.querySelector("a").getAttribute("href");
+
+    console.log("Href", href);
+    console.log("pathName", pathName);
+
     if (pathName === href) {
       item.classList.add("active");
       console.log("Active class added in menu");

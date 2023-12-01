@@ -72,6 +72,7 @@ const cursoricon3 = document.getElementById("cursoricon3");
 
 // ! Scroll on button click
 function scrollToContent() {
+  console.log("Scroll Button Clicked");
   cursoricon2.classList.remove("active");
   cursor.style.transform = "none";
   cursor.style.boxShadow = "0px 0px 30px white";

@@ -1,7 +1,7 @@
 //! Add Navigation bar
 
 const navbarContainer = document.getElementById("navbarContainer");
-fetch("navbar.html") //! Fetch navbar html into the element navbar
+fetch("../HTML/navbar.html") //! Fetch navbar html into the element navbar
   .then((response) => response.text())
   .then((data) => {
     navbarContainer.innerHTML = data;
@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkbox = document.getElementById("hamburgerCheckbox");
   const body = document.querySelector("body");
   const menu_items = document.querySelector(".navbar_menu");
+
+  function keyPress(e) {
+    if (e.key === "Escape") {
+      navbar_menu.classList.remove("show");
+      body.style.overflow = "auto";
+      console.log("Escape Key Pressed: Menu Hidden.");
+    }
+  }
 
   checkbox.addEventListener("click", function () {
     //! Show the Menu when checked
@@ -35,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.style.mixBlendMode = "difference";
     cursor.style.boxShadow = "none";
     cursoricon1.classList.add("active");
+    cursoricon2.classList.remove("active");
   });
 
   navbar_menu.addEventListener("mouseout", () => {

@@ -9,24 +9,21 @@
   /* ! EDIT */
   margin: 10px 22px;
   border-radius: 5em;
-}
-
-.material-symbols-rounded.md-60 {
-  font-size: 8em;
+  z-index: 1003;
 }
 
 .website-title {
   /* font-weight: bold; */
   font-size: 20px;
-  position: absolute;
+  /* position: absolute; */
   align-items: center;
   justify-content: center;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease;
 }
 
 .navbar-brand:hover {
   color: #00bbff !important;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease;
 }
 
 .navbar-brand {
@@ -42,7 +39,7 @@
 .navbar_menu {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -59,7 +56,7 @@
 .navbar_menu.show {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   overflow: none;
 }
 
@@ -132,16 +129,16 @@ a {
   color: rgba(255, 255, 255, 0.15);
 
   display: flex;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease;
   justify-content: center;
   align-items: center;
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .menu_item {
   color: rgba(255, 255, 255, 0.15);
   /* color: black; */
-  font-size: 8em;
+  font-size: 7.5em;
   font-weight: bolder !important;
   text-transform: uppercase;
   background-color: transparent;
@@ -154,14 +151,14 @@ a {
   color: white;
   font-family: Times;
   transform: skewX(-10deg);
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .item.active:hover,
 .item.item.active:hover .menu_item {
   color: #00bbff;
   font-family: Times;
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .item:hover,
@@ -169,11 +166,12 @@ a {
   color: white;
   font-family: Times;
   transform: skewX(-10deg);
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .menu_item_icon {
   margin-right: 0.5em;
+  font-size: 7.5em;
 }
 
 .horizontal_line {
@@ -243,3 +241,27 @@ a {
 #cursortext.active {
   display: inline-flex;
 } */
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1500px) {
+  .menu_item,
+  .menu_item_icon {
+    font-size: 6em;
+  }
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 900px) {
+  .menu_item,
+  .menu_item_icon {
+    font-size: 4em;
+  }
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 500px) {
+  .menu_item,
+  .menu_item_icon {
+    font-size: 3em;
+  }
+}

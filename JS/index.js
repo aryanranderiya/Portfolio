@@ -28,6 +28,7 @@ function handleIntersection2(entries, observer) {
   //! Fade in the navbar
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      document.getElementById("navbarContainer").style.visibility = "visible";
       document.querySelector(".navbar").style.opacity = "1";
       document.querySelector(".navbar").style.transform = "scale(1)";
     } else {
@@ -60,16 +61,6 @@ function scrollToCoverWithDelay() {
 const wrapperElement = document.querySelector(".words_rotating_span");
 wrapperElement.addEventListener("animationend", scrollToCoverWithDelay);
 
-// ! Scroll on button click
-function scrollToContent() {
-  const contentElement = document.querySelector(".content1");
-
-  contentElement.scrollIntoView({
-    top: contentElement.offsetTop,
-    behavior: "smooth",
-  });
-}
-
 const cover = document.querySelector(".titles");
 const titles = document.querySelector(".title_heading_1");
 const scroll_btn = document.querySelector(".scroll_btn");
@@ -78,6 +69,20 @@ const marquee = document.querySelector(".marquee");
 const hello_world = document.querySelector(".words");
 const cursoricon2 = document.getElementById("cursoricon2");
 const cursoricon3 = document.getElementById("cursoricon3");
+
+// ! Scroll on button click
+function scrollToContent() {
+  cursoricon2.classList.remove("active");
+  cursor.style.transform = "none";
+  cursor.style.boxShadow = "0px 0px 30px white";
+
+  const contentElement = document.querySelector(".content1");
+
+  contentElement.scrollIntoView({
+    top: contentElement.offsetTop,
+    behavior: "smooth",
+  });
+}
 
 // ! Titles & Cover
 cover.addEventListener("mouseover", () => {

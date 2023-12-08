@@ -1,6 +1,6 @@
 @font-face {
   font-family: Helvetica;
-  src: url("../fonts/Helvetica.ttf") format("truetype");
+  src: url("/fonts/Helvetica.ttf") format("truetype");
 }
 
 * {
@@ -26,8 +26,8 @@ body {
   overflow: hidden;
 }
 
-hr{
-  background-color: white ;
+hr {
+  background-color: white;
 }
 
 header {
@@ -47,7 +47,7 @@ header {
 
 @font-face {
   font-family: Akira;
-  src: url("../fonts/Akira.ttf") format("truetype");
+  src: url("/fonts/Akira.ttf") format("truetype");
 }
 
 .navbar {
@@ -333,27 +333,27 @@ header {
 
 @font-face {
   font-family: IllusionSerif;
-  src: url("../fonts/IllusionSerif-Regular.ttf") format("truetype");
+  src: url("/fonts/IllusionSerif-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: Times;
-  src: url("../fonts/times.ttf") format("truetype");
+  src: url("/fonts/times.ttf") format("truetype");
 }
 
 @font-face {
   font-family: TimesBD;
-  src: url("../fonts/timesbd.ttf") format("truetype");
+  src: url("/fonts/timesbd.ttf") format("truetype");
 }
 
 @font-face {
   font-family: TimesI;
-  src: url("../fonts/timesi.ttf") format("truetype");
+  src: url("/fonts/timesi.ttf") format("truetype");
 }
 
 @font-face {
   font-family: TimesBI;
-  src: url("../fonts/timesbi.ttf") format("truetype");
+  src: url("/fonts/timesbi.ttf") format("truetype");
 }
 
 /* ! Perspective text */

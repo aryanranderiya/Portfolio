@@ -1,7 +1,7 @@
 //! Add Navigation bar
 
 const navbarContainer = document.getElementById("navbarContainer");
-fetch("../HTML/navbar.html") //! Fetch navbar html into the element navbar
+fetch("../docs/navbar.html") //! Fetch navbar html into the element navbar
   .then((response) => response.text())
   .then((data) => {
     navbarContainer.innerHTML = data;

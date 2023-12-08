@@ -1,6 +1,6 @@
 // Gradient create
 
-import { Gradient } from "../js/gradient.js";
+import { Gradient } from "./gradient.js";
 
 // Create your instance
 const gradient = new Gradient();

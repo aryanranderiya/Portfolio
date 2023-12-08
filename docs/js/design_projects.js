@@ -40,11 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //! Fade in the content box
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log("test1");
         heading_title.style.opacity = "1";
       } else {
         heading_title.style.opacity = "0";
-        console.log("test2");
       }
     });
   }

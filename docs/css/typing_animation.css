@@ -48,3 +48,15 @@
   -webkit-animation: typing 1s steps(14, end),
     blink-caret 0.5s step-end infinite alternate;
 }
+
+/* !Responsive */
+@media screen and (max-width: 600px) {
+  .typing_animation {
+    font-size: 3em;
+  }
+
+  .animation_paragraph {
+    font-size: 10px;
+    overflow-wrap: break-word;
+  }
+}

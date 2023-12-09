@@ -70,6 +70,10 @@ header {
   align-items: center;
 }
 
+.socials_icon {
+  font-size: 4em;
+}
+
 .nav-item-with-icon a {
   display: flex;
   align-items: center;
@@ -547,3 +551,40 @@ p {
 }
 
 /* ! marquee end */
+
+/* !Responsive */
+@media screen and (max-width: 600px) {
+  .words_rotating_span {
+    font-size: 50px;
+    margin-bottom: 1px;
+  }
+
+  .my_portfolio {
+    font-size: 1.5em;
+  }
+
+  .aryan_randeriya {
+    font-size: 3.5em;
+  }
+
+  #gradient-canvas {
+    border-radius: 2em;
+  }
+
+  #ontop-gradient {
+    border-radius: 2em;
+  }
+
+  .subcontent {
+    height: 70%;
+    width: 90%;
+    margin: 4em;
+    margin-top: 5em;
+    /* margin-top: -2%; */
+    /* border-radius: 0px; */
+  }
+
+  .socials_icon {
+    font-size: 2em;
+  }
+}

@@ -173,3 +173,18 @@
     width: 100%;
   }
 }
+
+/* !Responsive */
+@media screen and (max-width: 600px) {
+  .progress-loader-helloworld {
+    margin-top: 30px;
+    /* width: 20%;
+    background: rgba(236, 236, 238, 0.253);
+    height: 3px;
+    border-radius: 7px; */
+  }
+
+  .words {
+    height: 0.2em;
+  }
+}

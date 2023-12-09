@@ -8,7 +8,7 @@
   font-weight: 500;
   border-radius: 0.9em;
   border: none;
-  letter-spacing: 0.05em;
+  /* letter-spacing: 0.05em; */
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -52,4 +52,30 @@
 
 .button1:active .icon {
   transform: scale(0.95);
+}
+
+/* !Responsive */
+@media screen and (max-width: 600px) {
+  .button1 {
+    font-size: 12px;
+    /* padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 2.5em;
+    height: 2.5em;
+    width: fit-content;
+    margin-top: 2em;
+    margin-right: 0.5em; */
+  }
+
+  /* .button1 .icon {
+    margin-left: 0.5em;
+    height: 2em;
+    width: 2em;
+    border-radius: 0.6em;
+    right: 0.2em;
+  } */
+/* 
+  .button1 .icon svg {
+    width: 0.9em;
+  } */
 }

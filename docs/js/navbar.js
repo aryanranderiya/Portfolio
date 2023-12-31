@@ -62,8 +62,8 @@ function setActiveLink() {
   items.forEach((item) => {
     const href = item.querySelector("a").getAttribute("href");
 
-    console.log("Href", href);
-    console.log("pathName", pathName);
+    // console.log("Href", href);
+    // console.log("pathName", pathName);
 
     if (pathName === href) {
       item.classList.add("active");

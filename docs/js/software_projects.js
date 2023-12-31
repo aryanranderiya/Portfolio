@@ -38,7 +38,7 @@ const projectsRef = ref(database, "Projects/");
 function processDataAndHidePreloader(snapshot) {
   snapshot.forEach((childSnapshot) => {
     const projectDetails = childSnapshot.val();
-    console.log("Project ID: ", childSnapshot.key);
+    console.log(childSnapshot.key);
 
     var projectTitle = projectDetails.project_title;
     var projectDesc = projectDetails.project_description;
@@ -54,7 +54,7 @@ function processDataAndHidePreloader(snapshot) {
       projectType_icon = "fa-brands fa-android";
     }
 
-    console.log("type:" + projectType);
+    // console.log("type:" + projectType);
     const card = document.createElement("div");
     card.innerHTML = `
       <div class="card">
@@ -96,13 +96,17 @@ function processDataAndHidePreloader(snapshot) {
   setTimeout(function () {
     blackCover.classList.remove("visible");
     document.body.style.overflow = "auto";
-
     terminal_bling.classList.add("animation_paragraph");
   }, 1000);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
+
+  // ! REMOVE THIS :- !!!
+  blackCover.classList.remove("visible");
+  document.body.style.overflow = "auto";
+  terminal_bling.classList.add("animation_paragraph");
 });
 
 //! Software Projects Title

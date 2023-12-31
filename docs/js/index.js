@@ -198,3 +198,22 @@ hello_world.addEventListener("mouseout", () => {
   cursor.style.mixBlendMode = "normal";
   cursor.style.boxShadow = "0px 0px 30px white";
 });
+
+// ! Wave icon cursor
+
+const content1 = document.querySelector(".content1");
+const cursoriconwave = document.getElementById("cursoriconwave");
+
+content1.addEventListener("mouseover", () => {
+  cursor.style.transform = "none";
+  cursor.style.boxShadow = "none";
+  cursor.classList.add("transparent");
+  cursoriconwave.classList.add("active");
+  cursoricon2.classList.remove("active");
+});
+
+content1.addEventListener("mouseout", () => {
+  cursor.classList.remove("transparent");
+  cursor.style.boxShadow = "0px 0px 30px white";
+  cursoriconwave.classList.remove("active");
+});

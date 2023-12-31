@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Add Navigation bar
   const footerContainer = document.getElementById("footerContainer");
 
   if (footerContainer) {
-    // Check if the element is found
     fetch("footer.html")
       .then((response) => response.text())
       .then((data) => {
@@ -11,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         footerContainer.style.cssText = "";
         setActiveLink();
 
-        // Other code related to the footer
         const footer1 = document.querySelector(".footer1");
         const footer2 = document.querySelector(".footer2");
 

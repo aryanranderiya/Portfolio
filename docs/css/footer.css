@@ -3,8 +3,12 @@
   src: url("../fonts/Helvetica.ttf") format("truetype");
 }
 
-.footer_main {
+footer {
+  padding-top: 20px;
   background-color: black;
+}
+
+.footer_main {
   margin: 5% 5%;
 }
 

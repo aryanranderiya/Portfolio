@@ -104,9 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
   onValue(projectsRef, processDataAndHidePreloader, { onlyOnce: true });
 
   // ! REMOVE THIS :- !!!
-  blackCover.classList.remove("visible");
-  document.body.style.overflow = "auto";
-  terminal_bling.classList.add("animation_paragraph");
+  // blackCover.classList.remove("visible");
+  // document.body.style.overflow = "auto";
+  // terminal_bling.classList.add("animation_paragraph");
 });
 
 //! Software Projects Title

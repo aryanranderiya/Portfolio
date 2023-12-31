@@ -45,6 +45,10 @@ header {
   opacity: 0;
 }
 
+.section {
+  height: 100%;
+}
+
 @font-face {
   font-family: Akira;
   src: url("../fonts/Akira.ttf") format("truetype");
@@ -164,7 +168,41 @@ header {
   font-family: TimesDisplay;
 }
 
-.content1 {
+.content1_title {
+  justify-content: center;
+  /* width: 100%; */
+  color: white;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+
+#hey {
+  font-size: 5em;
+  margin-bottom: 40px;
+}
+#imaryan {
+  font-size: 3.5em;
+  margin-left: 10%;
+  margin-bottom: 25px;
+}
+
+#description {
+  line-height: 120%;
+  width: 110%;
+  font-size: 2.5em;
+  margin-left: 20%;
+}
+
+.subcontent1 {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.content1,
+.content2 {
   height: 100%;
   width: 100%;
   background: black;

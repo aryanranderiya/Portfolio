@@ -108,11 +108,19 @@ button:hover {
   position: fixed;
 }
 
+#cursoriconwave {
+  margin-top: 23px;
+  height: 10%;
+  z-index: 2001;
+  position: fixed;
+}
+
 #cursoricon1,
 #cursoricon2,
 #cursoricon3,
 #cursoricon4,
 #cursoricon5,
+#cursoriconwave,
 #cursortext {
   display: none;
 }
@@ -122,6 +130,7 @@ button:hover {
 #cursoricon3.active,
 #cursoricon4.active,
 #cursoricon5.active,
+#cursoriconwave.active,
 #cursortext.active {
   display: inline-block;
 }

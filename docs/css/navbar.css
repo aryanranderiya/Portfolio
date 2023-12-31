@@ -186,56 +186,6 @@ a {
   font-family: Times;
 }
 
-#cursortext {
-  height: 60%;
-  color: white;
-  font-size: 3px !important;
-  /* opacity: 0; */
-  z-index: 2001;
-  position: fixed;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 0 0 3px black;
-}
-
-#cursoricon1 {
-  color: black;
-  font-size: 0.7em !important;
-  z-index: 2001;
-  position: fixed;
-  font-weight: bold;
-}
-
-#cursoricon2 {
-  color: black;
-  font-size: 0.7em !important;
-  z-index: 2001;
-  position: fixed;
-  font-weight: bold;
-  text-align: center;
-}
-
-#cursoricon3 {
-  color: black;
-  font-size: 0.7em !important;
-  z-index: 2001;
-  position: fixed;
-  font-weight: bold;
-}
-
-#cursoricon1,
-#cursoricon2,
-#cursoricon3,
-#cursortext {
-  display: none;
-}
-
-#cursoricon1.active,
-#cursoricon2.active,
-#cursoricon3.active,
-#cursortext.active {
-  display: inline-block;
-}
 /* 
 #cursortext.active {
   display: inline-flex;

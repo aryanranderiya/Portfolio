@@ -42,6 +42,90 @@ button:hover {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
+.cursor.transparent {
+  background-color: transparent;
+}
+
+.cursor.partially_transparent {
+  background-color: transparent;
+  outline-color: white;
+  outline-width: 0px;
+  outline-style: solid;
+  backdrop-filter: blur(0.7px);
+  -webkit-backdrop-filter: blur(0.7px);
+}
+
+#cursortext {
+  height: 60%;
+  color: white;
+  font-size: 3px !important;
+  /* opacity: 0; */
+  z-index: 2001;
+  position: fixed;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 3px black;
+}
+
+#cursoricon1 {
+  color: black;
+  font-size: 0.7em !important;
+  z-index: 2001;
+  position: fixed;
+  font-weight: bold;
+}
+
+#cursoricon2 {
+  color: black;
+  font-size: 0.7em !important;
+  z-index: 2001;
+  position: fixed;
+  font-weight: bold;
+  text-align: center;
+}
+
+#cursoricon3 {
+  color: black;
+  font-size: 0.7em !important;
+  z-index: 2001;
+  position: fixed;
+  font-weight: bold;
+}
+
+#cursoricon4 {
+  color: white;
+  font-size: 0.6em !important;
+  z-index: 2001;
+  position: fixed;
+  font-weight: bold;
+  text-align: center;
+}
+
+#cursoricon5 {
+  margin-top: 23px;
+  height: 40px;
+  z-index: 2001;
+  position: fixed;
+}
+
+#cursoricon1,
+#cursoricon2,
+#cursoricon3,
+#cursoricon4,
+#cursoricon5,
+#cursortext {
+  display: none;
+}
+
+#cursoricon1.active,
+#cursoricon2.active,
+#cursoricon3.active,
+#cursoricon4.active,
+#cursoricon5.active,
+#cursortext.active {
+  display: inline-block;
+}
+
 /* 
 .titles:hover + .cursor {
   opacity: 1;

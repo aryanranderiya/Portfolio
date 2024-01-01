@@ -76,7 +76,7 @@ button:hover {
 }
 
 #cursoricon2 {
-  color: black;
+  color: white;
   font-size: 0.7em !important;
   z-index: 2001;
   position: fixed;
@@ -115,14 +115,30 @@ button:hover {
   position: fixed;
 }
 
+#cursoriconidea,
+#cursoriconpallette,
+#cursoriconlaptop {
+  margin-top: 23px;
+  height: 10%;
+  z-index: 2001;
+  position: fixed;
+  /* transition: opacity 0.2s ease; */
+}
+
 #cursoricon1,
 #cursoricon2,
 #cursoricon3,
 #cursoricon4,
 #cursoricon5,
 #cursoriconwave,
-#cursortext {
-  display: none;
+#cursoriconlaptop,
+#cursoriconidea,
+#cursoriconpallette,
+#cursortext,
+#cursoriconwave.invisible {
+  /* display: none; */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 #cursoricon1.active,
@@ -131,8 +147,13 @@ button:hover {
 #cursoricon4.active,
 #cursoricon5.active,
 #cursoriconwave.active,
-#cursortext.active {
-  display: inline-block;
+#cursortext.active,
+#cursoriconlaptop.active,
+#cursoriconidea.active,
+#cursoriconpallette.active {
+  /* display: inline-block; */
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 /* 

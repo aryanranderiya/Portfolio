@@ -34,71 +34,77 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/2fafe620ef.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
 </head>
 
 <body>
+  <section class="sect_welcoming">
 
-  <div class="welcoming">
+    <div class="welcoming">
 
-    <div class="words" id="text_change">
-      <span class="words_rotating_span" id="main_hello_world">
-        <text id="hello">hELLO,&nbsp;</text>
-        <text id="world">World!</text>
-      </span>
-      <span class="words_rotating_span">¡Hola, Mundo!</span>
-      <span class="words_rotating_span">Bonjour le Monde!</span>
-      <span class="words_rotating_span">Hallo Welt!</span>
-      <span class="words_rotating_span">Ciao, Mondo!</span>
-      <span class="words_rotating_span">Olá, Mundo!</span>
-      <span class="words_rotating_span">Привет, мир!</span>
-      <span class="words_rotating_span">你好，世界！</span>
-      <span class="words_rotating_span">こんにちは、世界！</span>
-      <span class="words_rotating_span">안녕하세요, 세계!</span>
-      <span class="words_rotating_span">مرحباً بالعالم!</span>
-      <span class="words_rotating_span">नमस्ते दुनिया!</span>
-      <span class="words_rotating_span">Merhaba Dünya!</span>
-      <span class="words_rotating_span">Hallo, Wereld!</span>
-      <span class="words_rotating_span">Hej, världen!</span>
-      <span class="words_rotating_span">Hei, verden!</span>
-      <span class="words_rotating_span">Hei maailma!</span>
-      <span class="words_rotating_span">Hej Verden!</span>
-      <span class="words_rotating_span">Witaj, Świecie!</span>
-      <span class="words_rotating_span">Γεια σου, Κόσμε!</span>
-      <span class="words_rotating_span">שלום, עולם!</span>
-      <span class="words_rotating_span">Helló, Világ!</span>
-      <span class="words_rotating_span">Salut, Lume!</span>
-      <span class="words_rotating_span">Ahoj, Světe!</span>
-      <span class="words_rotating_span">Chào bạn, thế giới!</span>
-      <span class="words_rotating_span">สวัสดี, โลก!</span>
-      <span class="words_rotating_span">Halo, Dunia!</span>
-      <span class="words_rotating_span">Hello, Dunia!</span>
-      <span class="words_rotating_span">Hujambo, Dunia!</span>
-      <span class="words_rotating_span">سلام دنیا!</span>
-      <span class="words_rotating_span" id="main_hello_world">
-        <text id="hello">hELLO,&nbsp;</text>
-        <text id="world">World!</text>
-      </span><span class="words_rotating_span" id="main_hello_world">
-        <text id="hello">hELLO,&nbsp;</text>
-        <text id="world">World!</text>
-      </span><span class="words_rotating_span" id="main_hello_world">
-        <text id="hello">hELLO,&nbsp;</text>
-        <text id="world">World!</text>
-      </span><span class="words_rotating_span" id="main_hello_world">
-        <text id="hello">hELLO,&nbsp;</text>
-        <text id="world">World!</text>
-      </span><span class="words_rotating_span" id="main_hello_world">
-        <text id="hello">hELLO,&nbsp;</text>
-        <text id="world">World!</text>
-      </span><span class="words_rotating_span" id="main_hello_world">
-        <text id="hello">hELLO,&nbsp;</text>
-        <text id="world">World!</text>
-      </span>
+      <div class="words" id="text_change">
+        <span class="words_rotating_span" id="main_hello_world">
+          <text id="hello">hELLO,&nbsp;</text>
+          <text id="world">World!</text>
+        </span>
+        <span class="words_rotating_span">¡Hola, Mundo!</span>
+        <span class="words_rotating_span">Bonjour le Monde!</span>
+        <span class="words_rotating_span">Hallo Welt!</span>
+        <span class="words_rotating_span">Ciao, Mondo!</span>
+        <span class="words_rotating_span">Olá, Mundo!</span>
+        <span class="words_rotating_span">Привет, мир!</span>
+        <span class="words_rotating_span">你好，世界！</span>
+        <span class="words_rotating_span">こんにちは、世界！</span>
+        <span class="words_rotating_span">안녕하세요, 세계!</span>
+        <span class="words_rotating_span">مرحباً بالعالم!</span>
+        <span class="words_rotating_span">नमस्ते दुनिया!</span>
+        <span class="words_rotating_span">Merhaba Dünya!</span>
+        <span class="words_rotating_span">Hallo, Wereld!</span>
+        <span class="words_rotating_span">Hej, världen!</span>
+        <span class="words_rotating_span">Hei, verden!</span>
+        <span class="words_rotating_span">Hei maailma!</span>
+        <span class="words_rotating_span">Hej Verden!</span>
+        <span class="words_rotating_span">Witaj, Świecie!</span>
+        <span class="words_rotating_span">Γεια σου, Κόσμε!</span>
+        <span class="words_rotating_span">שלום, עולם!</span>
+        <span class="words_rotating_span">Helló, Világ!</span>
+        <span class="words_rotating_span">Salut, Lume!</span>
+        <span class="words_rotating_span">Ahoj, Světe!</span>
+        <span class="words_rotating_span">Chào bạn, thế giới!</span>
+        <span class="words_rotating_span">สวัสดี, โลก!</span>
+        <span class="words_rotating_span">Halo, Dunia!</span>
+        <span class="words_rotating_span">Hello, Dunia!</span>
+        <span class="words_rotating_span">Hujambo, Dunia!</span>
+        <span class="words_rotating_span">سلام دنیا!</span>
+        <span class="words_rotating_span" id="main_hello_world">
+          <text id="hello">hELLO,&nbsp;</text>
+          <text id="world">World!</text>
+        </span><span class="words_rotating_span" id="main_hello_world">
+          <text id="hello">hELLO,&nbsp;</text>
+          <text id="world">World!</text>
+        </span><span class="words_rotating_span" id="main_hello_world">
+          <text id="hello">hELLO,&nbsp;</text>
+          <text id="world">World!</text>
+        </span><span class="words_rotating_span" id="main_hello_world">
+          <text id="hello">hELLO,&nbsp;</text>
+          <text id="world">World!</text>
+        </span><span class="words_rotating_span" id="main_hello_world">
+          <text id="hello">hELLO,&nbsp;</text>
+          <text id="world">World!</text>
+        </span><span class="words_rotating_span" id="main_hello_world">
+          <text id="hello">hELLO,&nbsp;</text>
+          <text id="world">World!</text>
+        </span>
+      </div>
+
+      <div class="progress-loader-helloworld">
+        <div class="progress-helloworld"></div>
+      </div>
     </div>
-
-    <div class="progress-loader-helloworld">
-      <div class="progress-helloworld"></div>
-    </div>
-  </div>
+  </section>
 
   <!-- ! Preloader
     <div class="black_cover visible center-content">
@@ -118,76 +124,88 @@
 
 
   <!-- !First Page Cover -->
-  <div class="cover">
-    <canvas id="ontop-gradient-main"></canvas>
+  <section>
+    <div class="cover">
+      <canvas id="ontop-gradient-main"></canvas>
 
-    <canvas id="gradient-canvas-main"></canvas>
+      <canvas id="gradient-canvas-main"></canvas>
 
-    <!--! Custom Cursor -->
-    <div class="cursor">
-      <h1 id="cursortext">Languages</h1>
-      <span class="material-symbols-rounded " id="cursoricon1">
-        arrow_forward
-      </span>
-      <span class="material-symbols-rounded " id="cursoricon2">
-        arrow_downward
-      </span>
-      <span class="material-symbols-rounded" id="cursoricon3">
-        open_in_new
-      </span>
-      <i class="fa-regular fa-comments" id="cursoricon4"></i>
-      <img src="images/ios_icon_point_top.png" id="cursoricon5">
+      <!--! Custom Cursor -->
+      <div class="cursor">
+        <h1 id="cursortext">Languages</h1>
+        <span class="material-symbols-rounded " id="cursoricon1">
+          arrow_forward
+        </span>
+        <span class="material-symbols-rounded " id="cursoricon2">
+          arrow_downward
+        </span>
+        <span class="material-symbols-rounded" id="cursoricon3">
+          open_in_new
+        </span>
+        <i class="fa-regular fa-comments" id="cursoricon4"></i>
+        <img src="images/ios_icon_point_top.png" id="cursoricon5">
 
-      <img src="images/ios_icon_handwave.png" id="cursoriconwave">
+        <img src="images/ios_icon_handwave.png" id="cursoriconwave">
+        <img src="images/ios_icon_idea.png" id="cursoriconidea">
+        <img src="images/ios_icon_laptop.png" id="cursoriconlaptop">
+        <img src="images/ios_icon_pallette.png" id="cursoriconpallette">
 
-    </div>
-
-    <div class="titles center-content">
-      <div class="title_heading_1">
-
-        <text class="aryan_randeriya">
-          Aryan Randeriya
-        </text>
-        <br>
-        <hr>
-        <br>
-        <text class="my_portfolio">
-          MY PORTFOLIO.
-        </text>
       </div>
-    </div>
-    <button class="scroll_btn" onclick="scrollToContent()">
-      <svg class="svgArrow" height="32">
-        <path
-          d="M22.782 13.8 17 19.582 11.218 13.8a1 1 0 0 0-1.414 1.414L16.29 21.7a.992.992 0 0 0 .71.292.997.997 0 0 0 .71-.292l6.486-6.486a1 1 0 0 0-1.414-1.414z">
-        </path>
-      </svg>
-    </button>
-  </div>
 
-  <!--! Navigation Bar -->
-  <header id="navbarContainer"></header>
+      <div class="titles center-content">
+        <div class="title_heading_1">
+
+          <text class="aryan_randeriya">
+            Aryan Randeriya
+          </text>
+          <br>
+          <hr>
+          <br>
+          <text class="my_portfolio">
+            MY PORTFOLIO.
+          </text>
+        </div>
+      </div>
+      <button class="scroll_btn">
+        <svg class="svgArrow" height="32">
+          <path
+            d="M22.782 13.8 17 19.582 11.218 13.8a1 1 0 0 0-1.414 1.414L16.29 21.7a.992.992 0 0 0 .71.292.997.997 0 0 0 .71-.292l6.486-6.486a1 1 0 0 0-1.414-1.414z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </section>
+
 
   <!-- ! Content Div 1 -->
-  <div class="content1">
+  <section>
+    <div class="content1">
 
-    <div class="subcontent1">
-      <p class="content1_title" id="hey">Hey,</p>
-      <p class="content1_title" id="imaryan">I'm Aryan</p>
-      <p class="content1_title" id="description">— a Designer, Software Developer, & Aspiring Entrepreneur with a
-        Vision.</p>
+      <div class="subcontent1">
+        <p class="content1_title" id="hey">Hey,</p>
+        <p class="content1_title" id="imaryan">I'm Aryan</p>
+        <p class="content1_title" id="description">— a <span id="span_designer">Designer</span>, <span
+            id="span_dev">Software Developer</span>, & <span id="span_entre">Aspiring Entrepreneur</span> with a
+          Vision.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- ! Content Div 2 -->
-  <div class="content2">
+  <section>
 
-    <div class="subcontent center-content">
-      <canvas id="ontop-gradient"></canvas>
+    <!--! Navigation Bar -->
+    <header id="navbarContainer"></header>
 
-      <canvas id="gradient-canvas"></canvas>
+    <div class="content2">
 
-      <!-- <div class="main_text ">
+      <div class="subcontent center-content">
+        <canvas id="ontop-gradient"></canvas>
+
+        <canvas id="gradient-canvas"></canvas>
+
+        <!-- <div class="main_text ">
         <div class="typing_animation"><text id="hello">Welcome!</text></div>
         <div class="animation_paragraph"> to my Website!
           I'm Aryan Randeriya, an aspiring 18 year old Software Developer & Graphic Designer!
@@ -195,52 +213,52 @@
         </div>
       </div> -->
 
-      <div class="buttons">
-        <a href="design_projects.html" target="_blank">
-          <button class="button1" id="btn1">
-            Graphic Design Projects&nbsp;&nbsp;
-            <!-- <span class="material-symbols-outlined">open_in_new</span> -->
-            <div class="icon">
-              <span style="color:black;" class="material-symbols-outlined">palette</span>
-            </div>
-          </button>
-        </a>
+        <div class="buttons">
+          <a href="design_projects.html" target="_blank">
+            <button class="button1" id="btn1">
+              Graphic Design Projects&nbsp;&nbsp;
+              <!-- <span class="material-symbols-outlined">open_in_new</span> -->
+              <div class="icon">
+                <span style="color:black;" class="material-symbols-outlined">palette</span>
+              </div>
+            </button>
+          </a>
 
-        <a href="software_projects.html" target="_blank">
-          <button class="button1" id="btn2">
-            Software Projects&nbsp;&nbsp;
-            <!-- <span class="material-symbols-outlined">open_in_new</span> -->
-            <div class="icon">
-              <span style="color:black;" class="material-symbols-outlined">
-                terminal
-              </span>
-            </div>
-          </button>
-        </a>
+          <a href="software_projects.html" target="_blank">
+            <button class="button1" id="btn2">
+              Software Projects&nbsp;&nbsp;
+              <!-- <span class="material-symbols-outlined">open_in_new</span> -->
+              <div class="icon">
+                <span style="color:black;" class="material-symbols-outlined">
+                  terminal
+                </span>
+              </div>
+            </button>
+          </a>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/aryanranderiya" target="_blank"><i
+              class="fa-brands fa-linkedin socials_icon"></i></a> <!-- style="color: #0072b1;"-->
+
+          <a href="https://www.github.com/aryanranderiya" target="_blank"><i
+              class="fa-brands fa-github socials_icon"></i></a>
+
+          <a href="https://www.behance.net/aryanranderiya" target="_blank"><i
+              class="fa-brands fa-behance socials_icon"></i></a>
+          <!-- style="color: #053eff;"-->
+
+          <a href="https://www.twitter.com/aryanranderiya" target="_blank"><i
+              class="fa-brands fa-twitter socials_icon"></i></a>
+          <!-- style="color: #00acee;"-->
+
+          <a href="https://www.instagram.com/aryanranderiya" target="_blank"><i
+              class="fa-brands fa-instagram instagram-icon socials_icon"></i></a>
+        </div>
+
       </div>
 
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/aryanranderiya" target="_blank"><i
-            class="fa-brands fa-linkedin socials_icon"></i></a> <!-- style="color: #0072b1;"-->
-
-        <a href="https://www.github.com/aryanranderiya" target="_blank"><i
-            class="fa-brands fa-github socials_icon"></i></a>
-
-        <a href="https://www.behance.net/aryanranderiya" target="_blank"><i
-            class="fa-brands fa-behance socials_icon"></i></a>
-        <!-- style="color: #053eff;"-->
-
-        <a href="https://www.twitter.com/aryanranderiya" target="_blank"><i
-            class="fa-brands fa-twitter socials_icon"></i></a>
-        <!-- style="color: #00acee;"-->
-
-        <a href="https://www.instagram.com/aryanranderiya" target="_blank"><i
-            class="fa-brands fa-instagram instagram-icon socials_icon"></i></a>
-      </div>
-
-    </div>
-
-    <!-- <div class="right">
+      <!-- <div class="right">
               <div class="perspective-text">
                   <div class="perspective-line">
                       <p></p>
@@ -265,40 +283,43 @@
               </div>
           </div> -->
 
-    <div class="marquee">
-      <div class="marquee__group" aria-hidden="true">
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-      </div>
-      <div class="marquee__group" aria-hidden="true">
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
-        <span class="outline_text">✦ Aryan ✦&nbsp;</span>
-        <span class="no_outline_text">Aryan&nbsp;</span>
+      <div class="marquee">
+        <div class="marquee__group" aria-hidden="true">
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+          <span class="outline_text">✦ Aryan ✦&nbsp;</span>
+          <span class="no_outline_text">Aryan&nbsp;</span>
+        </div>
       </div>
     </div>
-  </div>
+
+  </section>
 
   <!--! Footer -->
-  <footer id="footerContainer"></footer>
+  <footer id="footerContainer" class="footerContainer"></footer>
+
 
   <!--! Scripts -->
   <script src="js/navbar.js"></script>
@@ -307,7 +328,7 @@
   <script src="js/cursor.js"></script>
   <!-- <script src="js/preloader.js"></script> -->
   <script type="module" src="js/index_applygradient.js"></script>
-  <script src="js/index.js"></script>
+  <script type="module" src="js/index.js"></script>
 
 </body>
 

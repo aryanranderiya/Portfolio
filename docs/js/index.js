@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function removeHelloWorldCover() {
     setTimeout(function () {
       const coverElement = document.querySelector(".cover");
-      !!coverElement.scrollIntoView({ behavior: "smooth" });
+      // !!coverElement.scrollIntoView({ behavior: "smooth" });
       document.body.style.overflow = "auto";
       const welcoming = document.querySelector(".welcoming");
       welcoming.style.opacity = "0";
@@ -75,10 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
       cursor.style.mixBlendMode = "normal";
       cursor.style.transform = "none";
       cursor.style.boxShadow = "0px 0px 30px white";
+      document.querySelector(".scroll_btn").style.opacity = "1";
     }, 800);
 
     setTimeout(function () {
       document.querySelector(".welcoming").remove();
+      // document.querySelector(".sect_welcoming").remove();
     }, 1600);
   }
 

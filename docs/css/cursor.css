@@ -38,9 +38,9 @@ button:hover {
 }
 
 .cursor.blur {
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .cursor.transparent {
   background-color: transparent;
@@ -51,8 +51,8 @@ button:hover {
   outline-color: white;
   outline-width: 0px;
   outline-style: solid;
-  backdrop-filter: blur(0.7px);
-  -webkit-backdrop-filter: blur(0.7px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(1px);
 }
 
 #cursortext {

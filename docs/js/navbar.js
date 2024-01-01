@@ -7,9 +7,10 @@ fetch("navbar.html") //! Fetch navbar html into the element navbar
     navbarContainer.innerHTML = data;
     navbarContainer.style.cssText = "";
     setActiveLink();
+    loadEverything();
   });
 
-document.addEventListener("DOMContentLoaded", function () {
+function loadEverything() {
   const cursoricon1 = document.getElementById("cursoricon1");
   const navbar_menu = document.querySelector(".navbar_menu");
   const checkbox = document.getElementById("hamburgerCheckbox");
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       checkbox.checked = false;
     }
   });
+
   checkbox.addEventListener("click", function () {
     //! Show the Menu when checked
     if (this.checked) {
@@ -52,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.style.boxShadow = "0px 0px 30px white";
     cursoricon1.classList.remove("active");
   });
-});
+}
 
 // ! highlight current active page
 function setActiveLink() {

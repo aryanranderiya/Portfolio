@@ -2,13 +2,15 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
+  height: 50px;
   background-color: rgba(0, 0, 0, 0.2);
-  outline-color: white;
-  outline-style: solid;
-  outline-width: 1px;
-  margin: 30px 22px;
-  border-radius: 5em;
+  /* padding: 30px 30px; */
+  padding-bottom: 60px;
+  /* border-radius: 5em; */
   z-index: 1003;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: -1000px; */
 }
 
 .website-title {
@@ -30,11 +32,12 @@
 }
 
 .container-fluid {
+  height: 30px;
+
   width: 100%;
   display: flex;
   gap: 16px;
 }
-
 
 .navbar_menu {
   /* display: none; */
@@ -114,7 +117,9 @@ a {
 }
 
 .menu_items {
-  margin-top: 2%;
+  padding: 4%;
+
+  margin-top: 3.5%;
   z-index: 2001;
   width: 100%;
   height: 100%;
@@ -128,7 +133,8 @@ a {
 .item {
   width: 100%;
   /* color: black; */
-  color: rgba(255, 255, 255, 0.15);
+  /* color: rgba(255, 255, 255, 0.15); */
+  color: white;
 
   display: flex;
   transition: color 0.3s ease;
@@ -138,19 +144,22 @@ a {
 }
 
 .menu_item {
-  color: rgba(255, 255, 255, 0.15);
+  /* color: rgba(255, 255, 255, 0.15); */
   /* color: black; */
-  font-size: 7.5em;
+  color: white;
+  font-size: 4em;
   font-weight: bolder !important;
   text-transform: uppercase;
   background-color: transparent;
-  margin: -0.1em 0 -0.1em 0;
+  /* margin: -0.1em 0 -0.1em 0; */
   animation: pulse 1s linear infinite;
 }
 
-.item.active,
+.item.active {
+  color: #00bbff;
+}
 .item.item.active .menu_item {
-  color: white;
+  color: #00bbff;
   font-family: Times;
   transform: skewX(-10deg);
   transition: color 0.3s ease, transform 0.2s ease;
@@ -165,15 +174,17 @@ a {
 
 .item:hover,
 .item:hover .menu_item {
-  color: white;
+  color: #424242;
   font-family: Times;
-  transform: skewX(-10deg);
   transition: color 0.3s ease, transform 0.2s ease;
+}
+.item:hover .menu_item {
+  transform: skewX(-10deg);
 }
 
 .menu_item_icon {
-  margin-right: 0.5em;
-  font-size: 7.5em;
+  margin-left: auto;
+  font-size: 5em !important;
 }
 
 .horizontal_line {
@@ -193,14 +204,6 @@ a {
 #cursortext.active {
   display: inline-flex;
 } */
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 1500px) {
-  .menu_item,
-  .menu_item_icon {
-    font-size: 6em;
-  }
-}
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 900px) {

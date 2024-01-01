@@ -41,7 +41,7 @@ function loadEverything() {
 
   // ! Cursor Menu Hover Effect
   navbar_menu.addEventListener("mouseover", () => {
-    cursor.style.transform = "scale(8)";
+    cursor.style.transform = "scale(5)";
     cursor.style.mixBlendMode = "difference";
     cursor.style.boxShadow = "none";
     cursoricon1.classList.add("active");

@@ -75,6 +75,16 @@ footer {
   justify-content: end;
 }
 
+.page_link:hover .icon,
+.page_link:hover .social_text,
+.page_link:hover .page_text,
+.social:hover .icon,
+.social:hover .social_text,
+.div_email:hover .icon,
+.div_email:hover .social_text {
+  color: #00bbff;
+}
+
 .page_text {
   text-align: end;
 }

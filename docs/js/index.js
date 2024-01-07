@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const subContent = document.querySelector(".subcontent");
+  const subContent = document.querySelector(".subcontent3");
   const content2 = document.querySelector(".content2");
 
   const navbar = document.querySelector(".navbar");

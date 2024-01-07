@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   observer2.observe(content2);
 
+  cursor.style.visibility = "hidden";
+
   // ! Scroll after animation finishes:
   function removeHelloWorldCover() {
     setTimeout(function () {
@@ -76,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cursor.style.transform = "none";
       cursor.style.boxShadow = "0px 0px 30px white";
       document.querySelector(".scroll_btn").style.opacity = "1";
+      cursor.style.visibility = "visible";
     }, 800);
 
     setTimeout(function () {
@@ -111,14 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cursoricon2.classList.remove("active");
   });
-
-  // titles.addEventListener("mouseover", () => {
-  //   cursor.style.mixBlendMode = "difference";
-  // });
-
-  // titles.addEventListener("mouseout", () => {
-  //   cursor.style.mixBlendMode = "normal";
-  // });
 
   //! Scroll Button
 

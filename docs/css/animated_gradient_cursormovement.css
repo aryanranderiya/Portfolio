@@ -1,0 +1,25 @@
+.glassy-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(150px);
+  box-shadow: 100px 10px red;
+}
+
+.animated_cursormovement_canvas {
+  z-index: 20;
+}
+
+.subcontent2 {
+  z-index: -10;
+  background-color: black;
+}
+
+/* .container {
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+} */

@@ -46,26 +46,10 @@ header {
   /* padding: 0 0; */
 }
 
-#navbarContainer {
-  visibility: hidden;
-  width: 100%;
-  top: 100%;
-  position: absolute;
-  z-index: 1001;
-  opacity: 0;
-}
-
 @font-face {
   font-family: Akira;
   src: url("../fonts/Akira.ttf") format("truetype");
 }
-
-.navbar {
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.1s ease;
-  transform: scale(1.3);
-}
-
 .welcoming {
   position: fixed;
   width: 100%;
@@ -241,6 +225,11 @@ header {
 
 .content2 {
   background: black;
+}
+
+.content1 {
+  /* background: black; */
+  margin-top: 0.1%;
 }
 
 .subcontent3 {
@@ -578,7 +567,7 @@ p {
 
 .marquee {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
   height: 10vh;
   user-select: none;
@@ -596,15 +585,29 @@ p {
 
 .marquee__group {
   flex-shrink: 0;
-  display: flex;
+  /* display: fl ex; */
   align-items: center;
   justify-content: space-between;
   gap: -10rem;
   min-width: 100%;
-  animation: scroll 15s linear infinite reverse;
+  /* animation: scroll 15s linear infinite reverse; */
   font-family: Akira;
+  font-size: 2.5em;
+  display: inline-block;
 }
 
+.logos {
+  overflow: hidden;
+  margin: 5% 6%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slide {
+  /* animation: 20s slide infinite normal; */
+}
+
+/* 
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -618,7 +621,7 @@ p {
   .marquee__group span {
     font-size: 2.5em;
   }
-}
+} */
 
 /* ! marquee end */
 

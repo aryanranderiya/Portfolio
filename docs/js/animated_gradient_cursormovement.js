@@ -8,8 +8,8 @@ const pointer = {
   y: 0.5 * window.innerHeight,
 };
 const params = {
-  pointsNumber: 40,
-  widthFactor: 6,
+  pointsNumber: 25,
+  widthFactor: 10,
   mouseThreshold: 0.5,
   spring: 0.25,
   friction: 0.5,

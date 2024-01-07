@@ -61,6 +61,29 @@ document.addEventListener("DOMContentLoaded", function () {
           cursoricon4.classList.remove("active");
         });
       });
+
+    //! Fade out navbar when footer is visible
+
+    function handleIntersection(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.getElementById("navbarContainer").style.opacity = "0";
+        } else {
+          document.getElementById("navbarContainer").style.opacity = "1";
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    });
+
+    observer.observe(footerContainer);
+    
+    // ! END
+
   } else {
     console.error("Element with ID 'footerContainer' not found.");
   }

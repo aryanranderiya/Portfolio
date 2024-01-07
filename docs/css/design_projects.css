@@ -12,12 +12,17 @@ body {
   /* scroll-snap-type: y mandatory; */
   background-color: black !important;
 }
+/* body {
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+} */
 
 section {
   height: 100%;
   width: 100%;
-  /* scroll-snap-align: start; */
-  /* scroll-snap-stop: always; */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   /* margin: 5% 5%; */
 }
 

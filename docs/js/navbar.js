@@ -8,6 +8,12 @@ fetch("navbar.html") //! Fetch navbar html into the element navbar
     navbarContainer.style.cssText = "";
     setActiveLink();
     loadEverything();
+
+    const items = document.querySelectorAll(".item");
+
+    items.forEach((item) => {
+      item.addEventListener("mouseenter", shuffleAnimation);
+    });
   });
 
 function loadEverything() {
@@ -64,17 +70,62 @@ function setActiveLink() {
   items.forEach((item) => {
     const href = item.querySelector("a").getAttribute("href");
 
-    console.log("Href", href);
-    console.log("pathName", pathName);
+    // console.log("Href", href);
+    // console.log("pathName", pathName);
 
     if (pathName === href) {
       item.classList.add("active");
-      console.log("Active class added in menu");
-    } else if (href === "/docs/") {
+      console.log("added active class");
+    } else if (pathName === "/docs/" + href) {
       item.classList.add("active");
-      console.log("Active class added in menu for index");
     } else {
       item.classList.remove("active");
     }
   });
+}
+
+// ! Text Letters Shuffle
+
+function getRandomCharacter() {
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  return chars[Math.floor(Math.random() * chars.length)];
+}
+
+function shuffleAnimation(event) {
+  const target = event.currentTarget;
+
+  if (target.dataset.animating) {
+    return;
+  }
+
+  target.dataset.animating = true;
+
+  const words = target.querySelectorAll(".word");
+  const originalWords = Array.from(words).map((word) => word.textContent);
+
+  let shuffles = 0;
+  const maxShuffles = 10;
+  const intervalDuration = 200 / maxShuffles;
+
+  let animationInterval = setInterval(() => {
+    if (shuffles >= maxShuffles) {
+      clearInterval(animationInterval);
+      words.forEach((word, index) => {
+        word.textContent = originalWords[index];
+      });
+
+      delete target.dataset.animating;
+    } else {
+      words.forEach((word) => {
+        const length = word.textContent.length;
+        let shuffledText = "";
+        for (let i = 0; i < length; i++) {
+          shuffledText += getRandomCharacter();
+        }
+        word.textContent = shuffledText;
+      });
+      shuffles++;
+    }
+  }, intervalDuration);
 }

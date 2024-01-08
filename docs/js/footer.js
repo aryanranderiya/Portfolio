@@ -60,6 +60,45 @@ document.addEventListener("DOMContentLoaded", function () {
           cursor.style.boxShadow = "0px 0px 30px white";
           cursoricon4.classList.remove("active");
         });
+
+        //! Hover Animation on Aryan Randeriya Fotoer Text
+
+        const defaultScale = 1;
+        const maxScale = 1.5;
+        const neighborScale = 1.2;
+
+        const wordContainers = document.querySelectorAll(
+          ".footer_bottom_name .bottom_name_container .word"
+        );
+
+        wordContainers.forEach((wordContainer) => {
+          const spans = wordContainer.querySelectorAll("span");
+
+          wordContainer.addEventListener("mouseover", (e) => {
+            const target = e.target;
+            const index = Array.from(spans).indexOf(target);
+
+            spans.forEach((span, i) => {
+              let scale = defaultScale;
+
+              if (i === index) {
+                // Scale the hovered span to 2
+                scale = maxScale;
+              } else if (i === index - 1 || i === index + 1) {
+                // Scale the side neighbors to 1.5
+                scale = neighborScale;
+              }
+
+              span.style.transform = `scaleY(${scale})`;
+            });
+          });
+
+          wordContainer.addEventListener("mouseout", () => {
+            spans.forEach((span) => {
+              span.style.transform = `scaleY(${defaultScale})`;
+            });
+          });
+        });
       });
 
     //! Fade out navbar when footer is visible
@@ -81,9 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     observer.observe(footerContainer);
-    
-    // ! END
 
+    // ! END
   } else {
     console.error("Element with ID 'footerContainer' not found.");
   }

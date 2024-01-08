@@ -337,20 +337,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ! change marquee direction on scroll
 
-gsap.registerPlugin(ScrollTrigger);
-
+let currentScroll = window.pageYOffset;
 let isScrollingDown = true;
 
-let tween = gsap
-  .to(".marquee__group", {
-    xPercent: -100,
-    repeat: -1,
-    duration: 10,
-    ease: "linear",
-  })
-  .totalProgress(0.5);
+// Create a GSAP timeline without initial progress
+let tween = gsap.to(".marquee__part", {
+  xPercent: -100,
+  repeat: -1,
+  duration: 3,
+  ease: "linear",
+});
 
-gsap.set(".marquee__group", { xPercent: -50 });
+gsap.set(".marquee__inner", { xPercent: -50 });
 
 window.addEventListener("wheel", function (event) {
   if (event.deltaY > 0) {
@@ -362,4 +360,6 @@ window.addEventListener("wheel", function (event) {
   gsap.to(tween, {
     timeScale: isScrollingDown ? 1 : -1,
   });
+
+  currentScroll = window.pageYOffset;
 });

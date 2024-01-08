@@ -27,7 +27,7 @@
 }
 
 .navbar-brand:hover {
-  color: #00bbff !important;
+  color: #636363 !important;
   transition: color 0.3s ease;
 }
 
@@ -95,7 +95,7 @@
   stroke-linejoin: round;
   stroke-width: 3;
   transition: stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1), stroke 0.3s ease;
 }
 
 .line-top-bottom {
@@ -112,6 +112,12 @@
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
   stroke: white;
+}
+
+.hamburger:hover .line-top-bottom,
+.hamburger:hover .line,
+.hamburger:hover .line.line-top-bottom {
+  stroke: #636363;
 }
 
 /* ! Menu Items */

@@ -217,17 +217,17 @@ a {
 } */
 
 /* Media query for smaller screens */
-@media only screen and (max-width: 900px) {
-  .menu_item,
-  .menu_item_icon {
-    font-size: 4em;
-  }
-}
-
-/* Media query for smaller screens */
 @media only screen and (max-width: 500px) {
   .menu_item,
   .menu_item_icon {
     font-size: 3em;
+  }
+
+  .item {
+    margin-top: 15%;
+  }
+
+  #websiteby{
+    margin-top: 10%;
   }
 }

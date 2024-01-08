@@ -249,23 +249,6 @@
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
-@media (max-width: 1000px) {
-  body {
-    align-items: flex-start;
-    overflow: auto;
-  }
-
-  #cards {
-    max-width: 1000px;
-    padding: 10px 0px;
-  }
-
-  .card {
-    flex-shrink: 1;
-    width: calc(50% - 4px);
-  }
-}
-
 @media (max-width: 500px) {
   .card {
     height: 180px;
@@ -281,19 +264,6 @@
 
   .card-info-wrapper {
     padding: 0px 10px;
-  }
-
-  .card-info > i {
-    font-size: 0.8em;
-  }
-
-  .card-info-title > h3 {
-    font-size: 0.9em;
-  }
-
-  .card-info-title > h4 {
-    font-size: 0.8em;
-    margin-top: 4px;
   }
 }
 

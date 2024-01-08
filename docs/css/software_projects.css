@@ -17,7 +17,7 @@ body {
   margin-left: 5%;
   font-family: VCR;
   margin-bottom: 3%;
-  margin-top: -10% !important;
+  /* margin-top: -10% !important; */
   line-height: 0.9em;
 }
 
@@ -62,4 +62,16 @@ body {
 .logos-slide img {
   height: 100px;
   margin: 0 40px;
+}
+
+/* !Responsive */
+@media screen and (max-width: 600px) {
+  .title-heading {
+    margin-top: 5%;
+    font-size: 5em;
+  }
+  .logos-slide img {
+    height: 50px;
+    margin: 10px 20px;
+  }
 }

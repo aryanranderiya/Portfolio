@@ -238,8 +238,47 @@ img {
 .merch-slider-item figure img {
   width: 400px;
   height: 400px;
-
   position: absolute;
   object-fit: cover;
 }
 /* ! Merchandise End */
+
+/* !Responsiveness */
+
+@media screen and (max-width: 600px) {
+  .title-heading {
+    font-size: 4em;
+    margin-top: 15%;
+  }
+
+  section {
+    height: fit-content;
+    margin-bottom: 20%;
+  }
+
+  .heading_title_text,
+  .heading_title_text_apparel {
+    font-size: 3em;
+    margin: 1%;
+  }
+  .title_icon {
+    font-size: 2.5em;
+    margin: 0 7%;
+  }
+
+  .slider-item figure img {
+    /* width: 100%; */
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    object-fit: contain;
+  }
+  .slider-item figure {
+    position: inherit;
+  }
+
+  .slider-item {
+    width:80vw;
+    /* padding: 3vw; */
+  }
+}

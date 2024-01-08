@@ -604,7 +604,6 @@ p {
     font-size: 50px;
     margin-bottom: 1px;
   }
-
   .my_portfolio {
     font-size: 1.5em;
   }
@@ -631,6 +630,18 @@ p {
   }
 
   .socials_icon {
+    font-size: 2em;
+  }
+
+  .subcontent1 p {
+    font-size: 2em;
+    margin-bottom: 10px !important;
+  }
+
+  #description {
+    text-align: end;
+  }
+  .marquee__part {
     font-size: 2em;
   }
 }

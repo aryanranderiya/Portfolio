@@ -171,7 +171,7 @@ a {
 }
 .item.item.active .menu_item {
   color: #00bbff;
-  font-family: Times;
+  font-family: TimesDisplay;
   transform: skewX(-10deg);
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -179,14 +179,14 @@ a {
 .item.active:hover,
 .item.item.active:hover .menu_item {
   color: #00bbff;
-  font-family: Times;
+  font-family: TimesDisplay;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .item:hover,
 .item:hover .menu_item {
   color: #424242;
-  font-family: Times;
+  font-family: TimesDisplay;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 .item:hover .menu_item {
@@ -208,7 +208,7 @@ a {
 #websiteby {
   color: grey;
   font-style: italic;
-  font-family: Times;
+  font-family: TimesDisplay;
 }
 
 /* 

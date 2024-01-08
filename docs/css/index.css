@@ -401,7 +401,7 @@ header {
 }
 
 @font-face {
-  font-family: Times;
+  font-family: TimesDisplay;
   src: url("../fonts/times.ttf") format("truetype");
 }
 

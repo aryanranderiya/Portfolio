@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //! Fade in the content box
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        heading_title.style.opacity = "1";
+        // heading_title.style.opacity = "1";
       } else {
-        heading_title.style.opacity = "0";
+        // heading_title.style.opacity = "0";
       }
     });
   }
@@ -154,11 +154,24 @@ const scroll = new DragScroll({
   bar: ".slider-progress-bar",
 });
 
+const merch_scroll = new DragScroll({
+  el: ".merch_slider",
+  wrap: ".slider-wrapper",
+  item: ".merch-slider-item",
+  bar: ".slider-progress-bar",
+});
+
 const animateScroll = () => {
   requestAnimationFrame(animateScroll);
   scroll.raf();
 };
 animateScroll();
+
+const animateScroll2 = () => {
+  requestAnimationFrame(animateScroll2);
+  merch_scroll.raf();
+};
+animateScroll2();
 //! Header Scrolling End
 
 //! Change cursor to drag when hover on headers
@@ -171,10 +184,26 @@ slider.addEventListener("mouseover", () => {
   cursor.style.boxShadow = "none";
   cursor.classList.add("transparent");
   cursoricondrag.classList.add("active");
-  console.log("test");
 });
 
 slider.addEventListener("mouseout", () => {
+  cursor.classList.remove("transparent");
+  cursor.style.boxShadow = "0px 0px 30px white";
+  cursoricondrag.classList.remove("active");
+});
+
+//! Change cursor to drag when hover on merch
+
+const merch_slider = document.querySelector(".merch_slider");
+
+merch_slider.addEventListener("mouseover", () => {
+  cursor.style.transform = "none";
+  cursor.style.boxShadow = "none";
+  cursor.classList.add("transparent");
+  cursoricondrag.classList.add("active");
+});
+
+merch_slider.addEventListener("mouseout", () => {
   cursor.classList.remove("transparent");
   cursor.style.boxShadow = "0px 0px 30px white";
   cursoricondrag.classList.remove("active");

@@ -23,7 +23,6 @@ section {
   width: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  /* margin: 5% 5%; */
 }
 
 @font-face {
@@ -43,7 +42,7 @@ section {
   color: white;
   font-size: 13em;
   font-weight: bolder;
-  margin-left: 5%;
+  margin: 0 5%;
   font-family: DirtyLine;
   letter-spacing: 10px;
 }
@@ -57,17 +56,18 @@ section {
   font-family: "Times New Roman", Times, serif;
 }
 
-.heading_title {
-  margin-left: 5%;
-}
-
-.heading_title_text {
+.heading_title_text,
+.heading_title_text_apparel {
+  width: 100%;
   font-family: Helvs;
   font-weight: bold;
   font-size: 8em;
   color: white;
+  margin: 1%;
 }
-
+.heading_title_text_apparel {
+  text-align: end;
+}
 #ontop-gradient {
   position: fixed;
   top: 0;
@@ -102,19 +102,25 @@ section {
   background-color: black;
 }
 
-.heading_title {
-  opacity: 0;
-  display: inline-flex;
+.heading_title,
+.heading_title_merch {
+  width: 100%;
+  opacity: 1;
+  display: flex;
   margin-bottom: 3%;
   margin-top: 8%;
   align-items: center;
   transition: opacity 0.3s ease;
 }
 
+.marginLeft {
+  margin-left: auto;
+}
+
 .title_icon {
   font-size: 5.5em;
   color: white;
-  margin-right: 10%;
+  margin: 0 2.5%;
 }
 
 .images {
@@ -133,7 +139,12 @@ hr {
   margin-top: 1em;
 }*/
 
-img {
+.merch_image {
+  height: 200px;
+  width: 200px;
+}
+
+.header_image {
   width: auto;
   height: 200px;
   display: block;
@@ -153,17 +164,17 @@ img {
 /*! Headers */
 .slider {
   width: 100%;
-  cursor: grab;
 }
 
 .slider-wrapper {
+  width: 100%;
   white-space: nowrap;
 }
 
 .slider-item {
   display: inline-block;
   width: 40vw;
-  padding: 3vw;
+  /* padding: 3vw; */
 }
 
 .slider-item figure {
@@ -198,3 +209,37 @@ img {
 }
 
 /* ! Headers End */
+
+/* ! Merchandise Designs */
+.merch_slider {
+  width: 100%;
+}
+
+.merch_slider_wrapper {
+  margin-bottom: 5%;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.merch-slider-item {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 2vw;
+  /* padding: 3vw; */
+}
+
+.merch-slider-item figure {
+  /* position: relative; */
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+.merch-slider-item figure img {
+  width: 400px;
+  height: 400px;
+
+  position: absolute;
+  object-fit: cover;
+}
+/* ! Merchandise End */
